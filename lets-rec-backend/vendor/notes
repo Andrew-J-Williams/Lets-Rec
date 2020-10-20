@@ -1,0 +1,39 @@
+Project Models, Relationships, and Attributes
+
+User
+    has_many :posts
+    has_many :user_teams
+    has_many :teams, through: :user_teams
+
+    t.string :username
+    t.string :email
+    t.string :password_digest
+    t.string :picture  
+
+Team
+    has_many :posts
+    has_many :user_teams
+    has_many :users, through: :user_teams
+
+    t.string :name
+    t.string :sport
+    t.string :location
+    t.string :venue
+    t.string :time_slot
+    t.string :status
+    t.integer :members
+
+UserTeam
+    belongs_to :user
+    belongs_to :team
+
+    t.integer :user_id
+    t.integer :team_id
+
+Post
+    belongs_to :user
+    belongs_to :team
+
+    t.string :content
+    t.integer :user_id
+    t.integer :team_id
