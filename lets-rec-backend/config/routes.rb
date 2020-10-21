@@ -11,5 +11,3 @@ Rails.application.routes.draw do
 
 
 end
-
-fetch(`http://localhost:3000`)

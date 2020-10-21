@@ -4,5 +4,5 @@ class Team < ApplicationRecord
     has_many :users, through: :user_teams
 
     validates :name, :sport, :location, :venue, :timeslot, :status, presence: true
-    validates_inclusion_of :status, in => ['open', 'closed'] 
+    validates_inclusion_of :status, :in => ['open', 'closed'] 
 end
