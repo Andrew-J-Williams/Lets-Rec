@@ -8,9 +8,6 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       
-      resources :user_teams
-      resources :posts
-
       resources :teams do
         resources :users
       end
@@ -18,6 +15,9 @@ Rails.application.routes.draw do
       resources :users do 
         resources :teams
       end
+
+      resources :user_teams
+      resources :posts
 
     end
   end
