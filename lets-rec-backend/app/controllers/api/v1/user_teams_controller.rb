@@ -1,6 +1,8 @@
 class Api::V1::UserTeamsController < ApplicationController
 
     before_action :set_user_team, only: [:show, :update, :destroy]
+    #before_action :set_user
+    #before_action :set_team
 
     def index
         @user_teams = UserTeam.all
@@ -9,7 +11,10 @@ class Api::V1::UserTeamsController < ApplicationController
     end
 
     def show
-        render json: @user_teams
+        #@user_team.user = @user
+        #@user_team.team = @team
+
+        render json: @user_team
     end
 
     def create
@@ -44,4 +49,11 @@ class Api::V1::UserTeamsController < ApplicationController
         @user_team = UserTeam.find(params[:id])
     end
 
+    #def set_user
+    #    @user = User.find(params[:user_id])
+    #end
+
+    #def set_team
+    #    @team = Team.find(params[:team_id])
+    #end
 end
