@@ -1,6 +1,5 @@
-export function fetchUsers(action){
+export function fetchUsers(){
 
-    return action
 
     /*
     fetch('http://localhost:3000/api/v1/users/')
