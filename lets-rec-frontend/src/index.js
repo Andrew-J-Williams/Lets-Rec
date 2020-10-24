@@ -6,11 +6,11 @@ import { Provider } from 'react-redux'
 
 import App from './App';
 
-//We need to set up our store.
+let store = createStore(reducer,composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider>
+    <App/>
+  </Provider>,
   document.getElementById('root')
 );
