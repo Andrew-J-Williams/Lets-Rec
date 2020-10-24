@@ -1,13 +1,15 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { fetchUsers } from './actions/fetchUsers';
 
 
 class App extends React.Component {
 
-  //componentDidMount(){
-  //  fetch('http://localhost:3000/api/v1/teams/')
-  //  .then(response => response.json())
-  //  .then(data => console.log(data))
-  //}
+  
+  componentDidMount(){
+    this.props.fetchUsers({type: 'FETCH_USERS', payload: {username: 'CaptainJilliams'}})
+  }
+  
 
   render(){
     return (
@@ -18,4 +20,13 @@ class App extends React.Component {
   }
 }
 
-export default App;
+// Our ways of accessing values in our store as props.
+/*
+const mapStateToProps = (state) => {
+  return {
+    state
+  }
+}
+*/
+
+export default connect(null, {fetchUsers})(App);

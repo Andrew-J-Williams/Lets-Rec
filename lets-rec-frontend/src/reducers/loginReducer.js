@@ -4,8 +4,10 @@ const initialState = {
 }
 
 export default function loginReducer (state=initialState, action){
-    switch(action.type){
-
-    }
+    return state
+    //return action.payload
+    //switch(action.type){
+    //    
+    //}
 }
 
