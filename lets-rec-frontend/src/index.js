@@ -6,6 +6,7 @@ import { Provider } from 'react-redux'
 
 import loginReducer from './reducers/loginReducer'
 import signupReducer from './reducers/signupReducer'
+import userReducer from './reducers/userReducer'
 
 import App from './App';
 
@@ -13,7 +14,8 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 let reducer = combineReducers({
   loginReducer,
-  signupReducer
+  signupReducer,
+  userReducer
 })
 
 let store = createStore(reducer,composeEnhancers(applyMiddleware(thunk)))

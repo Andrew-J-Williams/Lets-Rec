@@ -8,7 +8,7 @@ import { fetchUsers } from '../actions/fetchUsers'
 class Users extends React.Component {
 
     componentDidMount(){
-        fetchUsers()
+        this.props.fetchUsers()
     }
 
     render(){
@@ -16,7 +16,7 @@ class Users extends React.Component {
         return (
             <div>
                 <h1>TESTING</h1>
-                <Userlist/>
+                <Userlist users={this.props.users}/>
             </div>
         )
 
@@ -25,8 +25,8 @@ class Users extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        users: state.users
+        users: state.userReducer
     }
 }
 
-export default connect(mapStateToProps)(Users)
+export default connect(mapStateToProps, {fetchUsers})(Users)
