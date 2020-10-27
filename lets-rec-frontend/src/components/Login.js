@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
+//import { connect } from 'react-redux';
 
 
 
@@ -9,7 +9,18 @@ class Login extends React.Component {
 
         return(
             <div>
-                Login
+                <form>
+                    <input
+                    placeholder="Username"
+                    ></input>
+                    <input
+                    placeholder="Password"
+                    type="password"
+                    ></input>
+                    <button
+                    type="submit"
+                    >Log In</button>
+                </form>
             </div>
         )
 
