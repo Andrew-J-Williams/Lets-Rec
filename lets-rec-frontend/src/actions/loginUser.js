@@ -14,15 +14,13 @@ export const logUserIn = info => {
             if (user.error){
                 alert(user.error)
             } else {
-                dispatch(getUserData(user))
+                dispatch({
+                    type: "LOGIN_USER",
+                    payload: user
+                })
             }
         })
 
 
     }
 }
-
-const getUserData = data => ({
-    type: "LOGIN_USER",
-    payload: data
-})
