@@ -11,9 +11,18 @@ export const logUserIn = info => {
         })
         .then(response => response.json())
         .then(user => {
-            
+            if (user.error){
+                alert(user.error)
+            } else {
+                dispatch(getUserData(user))
+            }
         })
 
 
     }
 }
+
+const getUserData = data => ({
+    type: "LOGIN_USER",
+    payload: data
+})
