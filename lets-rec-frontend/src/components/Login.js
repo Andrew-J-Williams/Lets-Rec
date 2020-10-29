@@ -13,15 +13,15 @@ class Login extends React.Component {
 
     handleOnChange = (event) => {
         this.setState({
-            username: event.target.value,
-            password: event.target.value
+            [event.target.name]: event.target.value
         })
+        console.log(event.target.value)
     }
 
     handleOnSubmit = (event) => {
         event.preventDefault()
-
-
+        console.log(this.state)
+        this.props.logUserIn(this.state)
     }
 
     render(){
@@ -30,11 +30,13 @@ class Login extends React.Component {
             <div>
                 <form onSubmit={this.handleOnSubmit}>
                     <input
+                    name="username"
                     placeholder="Username"
                     value={this.state.username}
                     onChange={this.handleOnChange}
                     ></input>
                     <input
+                    name="password"
                     placeholder="Password"
                     type="password"
                     value={this.state.password}
@@ -53,4 +55,4 @@ class Login extends React.Component {
 
 }
 
-export default Login
+export default connect(null, {logUserIn})(Login)

@@ -1,4 +1,4 @@
-export const logUserIn = info => {
+export const logUserIn = (info) => {
 
     return (dispatch) => {
         fetch('http://localhost:3000/api/v1/login', {
@@ -7,7 +7,7 @@ export const logUserIn = info => {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
-            body: JSON.stringify({info})
+            body: JSON.stringify(info)
         })
         .then(response => response.json())
         .then(user => {
@@ -18,6 +18,7 @@ export const logUserIn = info => {
                     type: "LOGIN_USER",
                     payload: user
                 })
+                console.log(user)
             }
         })
 
