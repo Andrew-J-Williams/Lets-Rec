@@ -8,10 +8,6 @@ class Api::V1::TeamsController < ApplicationController
         render json: @teams
     end
 
-    def show
-        render json: @team
-    end
-
     def create
         @team = Team.new(team_params)
 
@@ -20,6 +16,10 @@ class Api::V1::TeamsController < ApplicationController
         else
             render json: {error: 'We could not process your team at this time.'}
         end
+    end
+
+    def show
+        render json: @team
     end
 
     def update
@@ -41,7 +41,7 @@ class Api::V1::TeamsController < ApplicationController
     end
 
     def set_team
-        @team = Team.find(params[:id])
+        @team = Team.find_by_id(params[:id])
     end
 
 end

@@ -1,10 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchUsers } from './actions/fetchUsers';
+import { fetchTeams } from './actions/fetchTeams';
 
-import Users from './containers/Users'
+import Home from './components/Home'
 import Login from './components/Login'
 import NavBar from './components/NavBar'
+import Users from './containers/Users'
+import Teams from './containers/Teams'
 
 
 import {
@@ -22,8 +25,10 @@ class App extends React.Component {
       <div className="App">
         <NavBar/>
         <Switch>
+          <Route exact path="/" component={Home}/>
           <Route path="/login" component={Login}/>
           <Route path="/users" component={Users}/>
+          <Route path="/teams" component={Teams}/>
         </Switch>
       </div>
       </Router>
@@ -40,4 +45,4 @@ const mapStateToProps = (state) => {
 }
 */
 
-export default connect(null, {fetchUsers})(App);
+export default connect(null, {fetchUsers, fetchTeams})(App);

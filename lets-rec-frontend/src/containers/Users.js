@@ -15,7 +15,7 @@ class Users extends React.Component {
 
         return (
             <div>
-                <h1>TESTING</h1>
+                <h1>Find a Friend!</h1>
                 <Userlist users={this.props.users}/>
             </div>
             
