@@ -4,13 +4,13 @@ import { fetchUsers } from './actions/fetchUsers';
 
 import Users from './containers/Users'
 import Login from './components/Login'
+import NavBar from './components/NavBar'
 
 
 import {
   BrowserRouter as Router,
   Route,
-  Switch,
-  Link
+  Switch
 } from 'react-router-dom';
 
 
@@ -20,17 +20,12 @@ class App extends React.Component {
     return (
       <Router>
       <div className="App">
-        <h3>
-          <Link to="/users">Users</Link>
-        </h3>
-        <h3>
-          <Link to="/login">Log In</Link>
-        </h3>
-      </div>
+        <NavBar/>
         <Switch>
           <Route path="/login" component={Login}/>
           <Route path="/users" component={Users}/>
         </Switch>
+      </div>
       </Router>
     );
   }
