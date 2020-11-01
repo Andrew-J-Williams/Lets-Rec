@@ -1,0 +1,22 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+}
+
+li {
+    display: block;
+    padding: 8px 16px;
+}
+
+li:hover {
+    background-color: #f1f1f1;;
+    color: white;
+    cursor: pointer;
+  }
+
+.navlink {
+    text-decoration: none;
+    color: #000;
+}

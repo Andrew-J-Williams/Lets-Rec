@@ -23,13 +23,13 @@ class App extends React.Component {
     return (
       <Router>
       <div className="App">
-        <NavBar/>
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route path="/login" component={Login}/>
           <Route path="/users" component={Users}/>
           <Route path="/teams" component={Teams}/>
         </Switch>
+        <NavBar/>
       </div>
       </Router>
     );
