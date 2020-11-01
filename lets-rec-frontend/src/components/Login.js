@@ -28,6 +28,7 @@ class Login extends React.Component {
 
         return(
             <div className="log-in-div">
+                <h3 className="log-in-title">Log In</h3>
                 <form onSubmit={this.handleOnSubmit} className="log-in-form">
                     <input
                     name="username"
@@ -49,7 +50,7 @@ class Login extends React.Component {
                     <button
                     type="submit"
                     className="log-in-button"
-                    >Log In</button>
+                    >Let's Rec!</button>
                 </form>
             </div>
         )
