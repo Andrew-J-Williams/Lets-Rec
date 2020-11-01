@@ -5,19 +5,19 @@ import Userlist from '../components/Userlist'
 import Profile from '../components/Profile'
 
 import { fetchUsers } from '../actions/fetchUsers'
+import { fetchProfile } from '../actions/fetchProfile'
 
 class Users extends React.Component {
 
     componentDidMount(){
-        this.props.fetchUsers()
+        this.props.fetchProfile()
     }
 
     render(){
 
         return (
             <div>
-                <h1>Find a Friend!</h1>
-                <Userlist users={this.props.users}/>
+                <Profile info={this.props.user}/>
             </div>
             
         )
@@ -27,8 +27,8 @@ class Users extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        users: state.userReducer
+        user: state.userReducer
     }
 }
 
-export default connect(mapStateToProps, {fetchUsers})(Users)
+export default connect(mapStateToProps, {fetchProfile})(Users)
