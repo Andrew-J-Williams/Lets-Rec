@@ -1,0 +1,36 @@
+.log-in-div {
+    background-color: white;
+    height: 300px;
+    width: 400px;
+    position: relative;
+    margin: auto;
+    box-shadow: 0px 1px 3px lightgray;
+    border-radius: 10px;
+}
+
+.log-in-form {
+    margin: auto;
+    position: relative;
+    padding: 10px;
+    left: 95px;
+    top: 55px;
+}
+
+.log-in-username {
+    margin: 10px;
+    padding: 10px;
+}
+
+.log-in-password {
+    margin: 10px;
+    padding: 10px;
+}
+
+.log-in-button {
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    left: 58px;
+}

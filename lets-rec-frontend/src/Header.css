@@ -1,0 +1,27 @@
+.header {
+    background-color: white;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+    box-shadow: 0px 1px lightgray;
+}
+
+.log-in {
+    position: fixed;
+    right: 50px;
+    top: 30px;
+    color: firebrick;
+    transition-duration: 0.3s;
+}
+
+.log-in:hover {
+    color: #dc1e42;
+    transition-duration: 0.3s;
+}
+
+.log-in-lock {
+    height: 15px;
+    position: fixed;
+    right: 105px;
+    top: 51px;
+}
