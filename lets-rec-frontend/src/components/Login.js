@@ -21,7 +21,7 @@ class Login extends React.Component {
     handleOnSubmit = (event) => {
         event.preventDefault()
         console.log(this.state)
-        this.props.logUserIn(this.state)
+        this.props.logUserIn(this.state, this.props.history)
     }
 
     render(){
@@ -31,25 +31,25 @@ class Login extends React.Component {
                 <h3 className="log-in-title">Log In</h3>
                 <form onSubmit={this.handleOnSubmit} className="log-in-form">
                     <input
-                    name="username"
-                    placeholder="Username"
-                    value={this.state.username}
-                    onChange={this.handleOnChange}
-                    className="log-in-username"
+                        name="username"
+                        placeholder="Username"
+                        value={this.state.username}
+                        onChange={this.handleOnChange}
+                        className="log-in-username"
                     ></input>
                     <br></br>
                     <input
-                    name="password"
-                    className="log-in-password"
-                    placeholder="Password"
-                    type="password"
-                    value={this.state.password}
-                    onChange={this.handleOnChange}
+                        name="password"
+                        className="log-in-password"
+                        placeholder="Password"
+                        type="password"
+                        value={this.state.password}
+                        onChange={this.handleOnChange}
                     ></input>
                     <br></br>
                     <button
-                    type="submit"
-                    className="log-in-button"
+                        type="submit"
+                        className="log-in-button"
                     >Let's Rec!</button>
                 </form>
             </div>

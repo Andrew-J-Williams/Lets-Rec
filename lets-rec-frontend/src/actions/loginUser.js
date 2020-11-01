@@ -1,4 +1,4 @@
-export const logUserIn = (info) => {
+export const logUserIn = (info, history) => {
 
     return (dispatch) => {
         fetch('http://localhost:3000/api/v1/login', {
@@ -13,15 +13,21 @@ export const logUserIn = (info) => {
         .then(user => {
             if (user.error){
                 alert(user.error)
+                history.push('/login')
             } else {
-                dispatch({
-                    type: "LOGIN_USER",
-                    payload: user
-                })
                 console.log(user)
+                localStorage.setItem("currentUser", user.id)
+                localStorage.setItem("username", user.username)
+                dispatch(getUser(user))
+                history.push('/')
             }
         })
 
 
     }
 }
+
+const getUser = cred => ({
+    type: "LOGIN_USER",
+    payload: cred
+})

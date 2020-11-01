@@ -1,7 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { fetchUsers } from './actions/fetchUsers';
-import { fetchTeams } from './actions/fetchTeams';
 
 import Header from './components/Header'
 import Home from './components/Home'
@@ -22,6 +19,7 @@ import {
 class App extends React.Component {
 
   render(){
+    
     return (
       <Router>
       <div className="App">
@@ -39,13 +37,4 @@ class App extends React.Component {
   }
 }
 
-// Our ways of accessing values in our store as props.
-/*
-const mapStateToProps = (state) => {
-  return {
-    state
-  }
-}
-*/
-
-export default connect(null, {fetchUsers, fetchTeams})(App);
+export default App;
