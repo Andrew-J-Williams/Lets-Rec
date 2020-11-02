@@ -1,5 +1,5 @@
-User.where(username: "Andy").first_or_create(username: "Andy", email:"andy@test.com", password:"password", picture: "testing")
-User.where(username: "Bailee").first_or_create(username: "Bailee", email:"bailee@test.com", password:"password", picture: "testing")
+User.where(username: "_captainjilliams_").first_or_create(username: "_captainjilliams_", email:"andy@test.com", password:"password", picture: "https://scontent.fhou1-2.fna.fbcdn.net/v/t1.0-9/10410409_10204352228911614_7347145493962414363_n.jpg?_nc_cat=103&ccb=2&_nc_sid=174925&_nc_ohc=jA-U7jYL6UIAX9qbu5b&_nc_ht=scontent.fhou1-2.fna&oh=a759b13409d783b575a71eed000f2a97&oe=5FC6BBF0")
+User.where(username: "Bailee").first_or_create(username: "Bailee", email:"bailee@test.com", password:"password", picture: "https://scontent.fhou1-2.fna.fbcdn.net/v/t1.0-9/100820996_10217499915909005_4436576031356223488_n.jpg?_nc_cat=105&ccb=2&_nc_sid=09cbfe&_nc_ohc=OkLZrgHo0f8AX8GMU7l&_nc_ht=scontent.fhou1-2.fna&oh=79e2ebec8dfb55d68a114fa173147a85&oe=5FC3853F")
 User.where(username: "Ira").first_or_create(username: "Ira", email:"ira@test.com", password:"password", picture: "testing")
 
 Team.where(name: "SouthSide Bears").first_or_create(

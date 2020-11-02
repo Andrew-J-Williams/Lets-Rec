@@ -18,6 +18,7 @@ export const logUserIn = (info, history) => {
                 console.log(user)
                 localStorage.setItem("currentUser", user.id)
                 localStorage.setItem("username", user.username)
+                localStorage.setItem("pic", user.picture)
 
                 const userId = localStorage.currentUser
                 dispatch(getUser(user))

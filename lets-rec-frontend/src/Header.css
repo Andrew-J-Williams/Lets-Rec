@@ -25,3 +25,14 @@
     right: 105px;
     top: 51px;
 }
+
+.log-in-pic {
+    height: 30px;
+    border-radius: 50%;
+    position: fixed;
+    right: 190px;
+    top: 43px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
