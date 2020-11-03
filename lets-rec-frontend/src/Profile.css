@@ -1,5 +1,7 @@
 .profile-container {
     background-color: white;
+    background: url("https://i.imgur.com/qwQNhRX.png");
+    background-size: 500px 500px;
     padding: 30px;
     width: 500px;
     height: 500px; 
@@ -11,8 +13,20 @@
 
 .profile-pic-container {
     margin: auto;
+    position: relative;
+    top:-300px;
 }
 
+.info-box {
+    padding: 30px;
+    margin: auto;
+    overflow: auto;
+    position: relative;
+    top: 100px;
+    background-color: white;
+    box-shadow: 1px 1px 3px lightgray;
+    border-radius: 10px;
+}
 
 .profile-pic {
     border-radius: 50%;
@@ -23,19 +37,64 @@
 }
 
 .profile-username {
+    color: firebrick;
     font-weight: 200;
     position: relative;
-    top: -150px;
-    left: 230px; 
+    left: 160px;
 }
 
 .profile-teams {
+    color: firebrick;
     font-weight: 200;
     position: relative;
-    top: -150px;
-    left: 230px;
+    left: 160px;
+}
+
+.profile-teammates {
+    color: firebrick;
+    font-weight: 200;
+    position: relative;
+    left: 240px;
+    top: -39px;
+}
+
+.profile-email {
+    color: firebrick;
+    font-weight: 200;
+    position: relative;
+    left: 180px;
+    top: -50px;
 }
 
 .email-icon {
     max-height: 20px;
+    position: relative;
+    left: 156px;
+    top: -90px;
+}
+
+.log-out-button {
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    width: 100px;
+    opacity: 70%;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    top: -50px;
+    border-radius: 25px;
+    background-color: white;
+    border-color: firebrick;
+    border-style: solid;
+    border-width: 2px;
+    color: firebrick;
+    font-weight: 200;
+    transition-duration: 0.3s;
+}
+
+.log-out-button:hover {
+    background-color: firebrick;
+    color: white;
+    transition-duration: 0.3s;
 }

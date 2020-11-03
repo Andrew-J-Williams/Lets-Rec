@@ -23,6 +23,7 @@ export const logUserIn = (info, history) => {
                 const userId = localStorage.currentUser
                 dispatch(getUser(user))
                 history.push(`/users/${userId}`)
+                window.location.reload()
             }
         })
 
