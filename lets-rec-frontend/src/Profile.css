@@ -1,6 +1,6 @@
 .profile-container {
     background-color: white;
-    padding: 20px;
+    padding: 30px;
     width: 500px;
     height: 500px; 
     margin: auto;
@@ -34,4 +34,8 @@
     position: relative;
     top: -150px;
     left: 230px;
+}
+
+.email-icon {
+    max-height: 20px;
 }

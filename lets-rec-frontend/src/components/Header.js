@@ -12,7 +12,7 @@ const Header = () => {
     return(
         <div className="header">
             <a href="/">  
-                <img src="https://i.imgur.com/TLLRHSM.png" alt="Logo.png" className="logo"/>
+                <img src="https://i.imgur.com/eux2ezM.png" alt="Logo.png" className="logo"/>
             </a>
             { loggedIn ? 
             <div>

@@ -1,16 +1,26 @@
 .header {
     background-color: white;
     overflow: hidden;
-    max-width: 100%;
+    min-width: 100%;
+    max-height: 102px;
     margin: 0 auto;
     box-shadow: 0px 1px lightgray;
 }
 
+.logo {
+    padding: 10px;
+    max-height: 80px;
+    position: relative;
+    left: 20px;
+    top: 2px;
+}
+
 .log-in {
-    position: fixed;
-    right: 50px;
-    top: 30px;
-    color: firebrick;
+    position: relative;
+    left: 1250px;
+    bottom: 80px;
+    color: black;
+    font-weight: 300;
     transition-duration: 0.3s;
 }
 
@@ -31,8 +41,5 @@
     border-radius: 50%;
     position: fixed;
     right: 190px;
-    top: 43px;
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
+    top: 45px;
 }
