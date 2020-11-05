@@ -1,7 +1,7 @@
 export const logUserOut = () => {
     
     return (dispatch) => {
-        return fetch("http://localhost:3000/api/v1/logout", {
+        fetch("http://localhost:3000/api/v1/logout", {
             headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
