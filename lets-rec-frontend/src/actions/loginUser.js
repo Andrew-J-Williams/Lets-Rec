@@ -19,11 +19,12 @@ export const logUserIn = (info, history) => {
                 
                 localStorage.setItem("currentUser", user.id)
                 localStorage.setItem("username", user.username)
+                localStorage.setItem("email", user.email)
+                localStorage.setItem("teams", JSON.stringify(user.teams))
                 localStorage.setItem("pic", user.picture)
 
-                const userId = localStorage.currentUser
                 dispatch(getUser(user))
-                history.push(`/users/${userId}`)
+                history.push(`/profile`)
                 window.location.reload()
             }
         })
@@ -35,9 +36,4 @@ export const logUserIn = (info, history) => {
 const getUser = cred => ({
     type: "LOGIN_USER",
     payload: cred
-})
-
-const setCurrentUser = user => ({
-    type: "SET_CURRENT_USER",
-    payload: user
 })

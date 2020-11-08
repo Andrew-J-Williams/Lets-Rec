@@ -3,8 +3,7 @@ const initialState = {
         username: '',
         email: '',
         picture: '',
-        teams: [],
-        currentUser: ""
+        teams: []
     }
 }
 
@@ -14,10 +13,6 @@ export default function userReducer (state=initialState, action) {
         case 'FETCH_PROFILE':
             return {
                 user: action.payload
-            }
-        case 'SET_CURRENT_USER':
-            return {
-                currentUser: action.payload
             }
         default:
             return state 

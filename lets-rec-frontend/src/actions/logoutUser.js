@@ -9,7 +9,7 @@ export const logUserOut = () => {
             method: "DELETE"
         })
         .then(response => response.json())
-        .then( data => {
+        .then(data => {
             console.log(data)
             dispatch(removeUser())
             localStorage.clear()
