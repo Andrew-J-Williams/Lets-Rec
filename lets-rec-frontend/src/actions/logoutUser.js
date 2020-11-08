@@ -1,20 +1,11 @@
+import { Redirect } from "react-router-dom"
+
 export const logUserOut = () => {
     
-    return (dispatch) => {
-        fetch("http://localhost:3000/api/v1/logout", {
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json"
-            },
-            method: "DELETE"
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log(data)
-            dispatch(removeUser())
-            localStorage.clear()
-            window.location.reload()
-        })
+    return dispatch => {
+        dispatch(removeUser())
+        localStorage.clear()
+        window.location.replace('http://localhost:3001/login')
     }
 }
 

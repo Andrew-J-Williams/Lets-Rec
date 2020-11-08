@@ -15,7 +15,7 @@ class UserProfile extends React.Component {
 
         return (
             <div>
-                <Profile/>
+                <Profile info={this.props.user}/>
             </div>   
         )
     }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { logUserOut } from '../actions/logoutUser'
 
 
 import '../Profile.css'
@@ -32,9 +33,16 @@ class Profile extends React.Component {
         }
     }
 
+    logOut = event => {
+        event.preventDefault()
+        this.props.logUserOut()
+    }
+
    
     render() {
-        this.setUser(this.state)
+        let loggedIn = parseInt(localStorage.currentUser, 10)
+
+
         return (
         <div className="profile-container">
             <div className="info-box">
@@ -47,13 +55,13 @@ class Profile extends React.Component {
             <div className="profile-pic-container">
                 <img src={this.state.picture} alt="Profile Pic" className="profile-pic"/>
             </div>
-                
+            {loggedIn ? <h5 type="submit" className="log-out-button" onClick={this.logOut}><b>Log Out</b></h5> : <p>Home</p>}
         </div>
         )
     }
 }
 
-export default Profile
+export default connect(null, {logUserOut})(Profile)
 
 /*
 {loggedIn ? <h5 type="submit" className="log-out-button"><b>Log Out</b></h5> : <p>Home</p>}
