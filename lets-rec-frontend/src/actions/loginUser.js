@@ -16,6 +16,7 @@ export const logUserIn = (info, history) => {
                 history.push('/login')
             } else {
                 console.log(user)
+                
                 localStorage.setItem("currentUser", user.id)
                 localStorage.setItem("username", user.username)
                 localStorage.setItem("pic", user.picture)
@@ -34,4 +35,9 @@ export const logUserIn = (info, history) => {
 const getUser = cred => ({
     type: "LOGIN_USER",
     payload: cred
+})
+
+const setCurrentUser = user => ({
+    type: "SET_CURRENT_USER",
+    payload: user
 })
