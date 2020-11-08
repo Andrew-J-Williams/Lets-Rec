@@ -2,8 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import Profile from '../components/Profile'
+import UserActivity from '../components/UserActivity'
 
 import { fetchProfile } from '../actions/fetchProfile'
+import { fetchUserPosts } from '../actions/fetchUserPosts'
 
 class UserProfile extends React.Component {
 
@@ -11,11 +13,16 @@ class UserProfile extends React.Component {
         this.props.fetchProfile()
     }
 
+    componentDidMount(){
+        this.props.fetchUserPosts()
+    }
+
     render(){
 
         return (
             <div>
-                <Profile info={this.props.user}/>
+                <UserActivity activity={this.props.posts}/>
+                <Profile/>
             </div>   
         )
     }
@@ -23,8 +30,8 @@ class UserProfile extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        user: state.userReducer.user
+        posts: state.userReducer.posts
     }
 }
 
-export default connect(mapStateToProps, {fetchProfile})(UserProfile)
+export default connect(mapStateToProps, {fetchProfile, fetchUserPosts})(UserProfile)

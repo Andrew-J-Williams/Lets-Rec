@@ -37,3 +37,9 @@ UserTeam.where(user_id: 1, team_id: 3).first_or_create(user_id: 1, team_id: 3)
 UserTeam.where(user_id: 2, team_id: 1).first_or_create(user_id: 2, team_id: 1)
 UserTeam.where(user_id: 2, team_id: 2).first_or_create(user_id: 2, team_id: 2)
 UserTeam.where(user_id: 3, team_id: 1).first_or_create(user_id: 3, team_id: 1)
+
+
+Post.create(content: "Hey guys! Just wanting to know when we plan on practicing this coming week.", user_id: 1, team_id: 1)
+Post.create(content: "I'll be bringing my own football on Thursday for the meetup.", user_id: 1, team_id: 1)
+Post.create(content: "Looks like it will be raining Friday night. Let's cancel the game.", user_id: 1, team_id: 1)
+Post.create(content: "I'll be bringing a friend to act as a sub for Monday night.", user_id: 1, team_id: 3)

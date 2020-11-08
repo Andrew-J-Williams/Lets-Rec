@@ -17,20 +17,9 @@ class Profile extends React.Component {
     }
 
     getTeamMembers = (state) => {
-
         const getMembers = state.map(team => team.members)
         const teammates = (getMembers.reduce(function(a, b){return a + b;}, 0) - state.length)
         return teammates
-    }
-
-    setUser = (state) => {
-        const userId = parseInt(localStorage.currentUser, 10)
-
-        if (state.id === userId){
-            console.log("We have a match!")
-        } else {
-            console.log("Try again my friend!")
-        }
     }
 
     logOut = event => {
@@ -40,10 +29,11 @@ class Profile extends React.Component {
 
    
     render() {
-        let loggedIn = parseInt(localStorage.currentUser, 10)
+        let loggedIn = parseInt(localStorage.currentUser, 10) && localStorage.username && localStorage.email && localStorage.teams && localStorage.pic
 
-
+        if (loggedIn){
         return (
+        
         <div className="profile-container">
             <div className="info-box">
                 <h1 className="profile-username">{this.state.username}</h1>
@@ -55,14 +45,15 @@ class Profile extends React.Component {
             <div className="profile-pic-container">
                 <img src={this.state.picture} alt="Profile Pic" className="profile-pic"/>
             </div>
-            {loggedIn ? <h5 type="submit" className="log-out-button" onClick={this.logOut}><b>Log Out</b></h5> : <p>Home</p>}
+            <h5 type="submit" className="log-out-button" onClick={this.logOut}><b>Log Out</b></h5> 
         </div>
+        
         )
+        } else {
+            window.location.replace('http://localhost:3001/login')
+        }
     }
 }
 
 export default connect(null, {logUserOut})(Profile)
 
-/*
-{loggedIn ? <h5 type="submit" className="log-out-button"><b>Log Out</b></h5> : <p>Home</p>}
-*/

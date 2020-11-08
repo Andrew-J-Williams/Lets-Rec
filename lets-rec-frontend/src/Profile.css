@@ -98,3 +98,10 @@
     color: white;
     transition-duration: 0.3s;
 }
+
+.please-log-in {
+    color: firebrick;
+    font-weight: 200;
+    position: relative;
+    text-align: center;
+}

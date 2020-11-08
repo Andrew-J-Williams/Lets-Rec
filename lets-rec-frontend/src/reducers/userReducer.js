@@ -3,8 +3,9 @@ const initialState = {
         username: '',
         email: '',
         picture: '',
-        teams: []
-    }
+        teams: [],
+    },
+    posts: []
 }
 
 export default function userReducer (state=initialState, action) {
@@ -13,6 +14,10 @@ export default function userReducer (state=initialState, action) {
         case 'FETCH_PROFILE':
             return {
                 user: action.payload
+            }
+        case 'FETCH_USER_POSTS':
+            return {
+                posts: action.payload
             }
         default:
             return state 
