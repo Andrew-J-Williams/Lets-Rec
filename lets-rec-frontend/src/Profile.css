@@ -9,12 +9,15 @@
     box-shadow: 1px 1px 3px lightgray;
     border-radius: 10px;
     overflow: auto;
+    position: fixed;
+    left: 750px;
 }
 
 .profile-pic-container {
     margin: auto;
     position: relative;
-    top:-230px;
+    top:-400px;
+    left: -10px;
 }
 
 .info-box {
@@ -30,7 +33,7 @@
 
 .profile-pic {
     border-radius: 50%;
-    height: 200px;
+    height: 220px;
     border-style: solid;
     border-color: white;
     box-shadow: 1px 1px 3px lightgray;
@@ -62,14 +65,14 @@
     color: firebrick;
     font-weight: 200;
     position: relative;
-    left: 205px;
+    left: 200px;
     top: -50px;
 }
 
 .email-icon {
     max-height: 20px;
     position: relative;
-    left: 180px;
+    left: 176px;
     top: -90px;
 }
 
@@ -104,4 +107,9 @@
     font-weight: 200;
     position: relative;
     text-align: center;
+}
+
+.profile-teams-container {
+    position: relative;
+    top: -30px;
 }

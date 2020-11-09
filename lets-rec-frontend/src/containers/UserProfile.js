@@ -4,14 +4,9 @@ import { connect } from 'react-redux';
 import Profile from '../components/Profile'
 import UserActivity from '../components/UserActivity'
 
-import { fetchProfile } from '../actions/fetchProfile'
 import { fetchUserPosts } from '../actions/fetchUserPosts'
 
 class UserProfile extends React.Component {
-
-    componentDidMount(){
-        this.props.fetchProfile()
-    }
 
     componentDidMount(){
         this.props.fetchUserPosts()
@@ -34,4 +29,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {fetchProfile, fetchUserPosts})(UserProfile)
+export default connect(mapStateToProps, {fetchUserPosts})(UserProfile)
