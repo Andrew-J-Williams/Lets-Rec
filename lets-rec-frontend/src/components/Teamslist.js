@@ -2,7 +2,7 @@ import React from 'react';
 
 const Teamslist = (props) => {
 
-    const myArray = props.teams.manyTeams
+    const myArray = props.teams
     console.log(...myArray)
 
     return(

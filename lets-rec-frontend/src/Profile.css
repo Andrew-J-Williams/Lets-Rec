@@ -16,8 +16,8 @@
 .profile-pic-container {
     margin: auto;
     position: relative;
-    top:-400px;
-    left: -10px;
+    top:-240px;
+    left: -20px;
 }
 
 .info-box {
@@ -107,9 +107,4 @@
     font-weight: 200;
     position: relative;
     text-align: center;
-}
-
-.profile-teams-container {
-    position: relative;
-    top: -30px;
 }

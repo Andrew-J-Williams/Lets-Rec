@@ -2,3 +2,41 @@
     font-weight: 200;
     color: firebrick
 }
+
+.team-circle {
+    background-color: firebrick;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    overflow: auto;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 1px 1px 3px lightgray;
+    transition: 0.3s;
+}
+
+.team-circle:hover {
+    height: 400px;
+    width: 400px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.team-name {
+    color: #f1f1f1;
+    font-weight: 300;
+    text-align: center;
+    position: relative;
+    top: 118px;
+}
+
+.member-circle {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.members-circle {
+    
+}

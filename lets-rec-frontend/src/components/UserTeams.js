@@ -16,8 +16,16 @@ class UserTeams extends React.Component {
             {teamsArray.map(team => {
                 if (userTeamsIds.includes(team.id)){
                     return(
-                    <div key={team.id}>
-                        <h4>{team.name}</h4>
+                    <div key={team.id} className="team-container">
+                        <div className="team-circle">
+                            <h3 className="team-name">{team.name}</h3>
+                            <h5>{team.sport}</h5>
+                        </div>
+                        <ul className="members-circle">
+                            {team.users.map(user =>
+                                <li><img src={user.picture} alt="member-bubble" className="member-circle"/></li>    
+                            )}
+                        </ul>
                     </div>
                     )
                 }

@@ -1,6 +1,6 @@
 export function fetchUserPosts(){
     return (dispatch) => {
-        const userId = localStorage.currentUser
+        const userId = parseInt(localStorage.currentUser, 10)
 
         if (userId) {
             fetch(`http://localhost:3000/api/v1/posts/`, {
@@ -12,8 +12,18 @@ export function fetchUserPosts(){
             })
             .then(response => response.json())
             .then(posts => {
+
+                const postArray = []
                
-               dispatch(getUserPosts(posts))
+                posts.forEach(element =>{
+                    if (element.user_id === userId){
+                        postArray.push(element)
+                    }
+                })
+
+                console.log(postArray)
+                
+               dispatch(getUserPosts(postArray))
             })
         }
     }

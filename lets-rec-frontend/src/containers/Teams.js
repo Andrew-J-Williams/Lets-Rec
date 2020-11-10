@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import Teamslist from '../components/Teamslist'
+import TeamsProfile from '../containers/TeamsProfile'
 
 import { fetchTeams } from '../actions/fetchTeams'
 
@@ -16,6 +17,7 @@ class Teams extends React.Component {
         return (
             <div>
                 <h1>Teams Directory</h1>
+                <TeamsProfile teams={this.props.teams}/>
                 <Teamslist teams={this.props.teams}/>
             </div>
             
@@ -26,7 +28,7 @@ class Teams extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        teams: state.teamsReducer
+        teams: state.teamsReducer.manyTeams
     }
 }
 
