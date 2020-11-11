@@ -35,8 +35,14 @@
     height: 50px;
     width: 50px;
     border-radius: 50%;
+    box-shadow: 1px 1px 3px lightgray;
 }
 
-.members-circle {
-    
+.members-circle {  
+    position: relative;
+    left: 300px;
+    top: -270px;
+    width: 100px;
+    background-color: white;
+    transition: 0.3s;
 }

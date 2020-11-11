@@ -21,11 +21,13 @@ class UserTeams extends React.Component {
                             <h3 className="team-name">{team.name}</h3>
                             <h5>{team.sport}</h5>
                         </div>
-                        <ul className="members-circle">
-                            {team.users.map(user =>
-                                <li><img src={user.picture} alt="member-bubble" className="member-circle"/></li>    
-                            )}
-                        </ul>
+                        <div className="members-circle">
+                            <ul>
+                                {team.users.map(user =>
+                                    <li><img src={user.picture} alt="member-bubble" className="member-circle"/></li>    
+                                )}
+                            </ul>
+                        </div>
                     </div>
                     )
                 }

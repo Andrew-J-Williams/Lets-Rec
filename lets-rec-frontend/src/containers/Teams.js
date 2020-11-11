@@ -16,7 +16,6 @@ class Teams extends React.Component {
 
         return (
             <div>
-                <h1>Teams Directory</h1>
                 <TeamsProfile teams={this.props.teams}/>
                 <Teamslist teams={this.props.teams}/>
             </div>
