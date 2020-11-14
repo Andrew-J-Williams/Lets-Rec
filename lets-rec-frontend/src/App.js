@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Home from './components/Home'
 import Login from './components/Login'
 import NavBar from './components/NavBar'
+import Posts from './containers/Posts'
 import UserProfile from './containers/UserProfile'
 import Teams from './containers/Teams'
 
@@ -26,7 +27,7 @@ class App extends React.Component {
         <Header/>
         <NavBar/>
         <Switch>
-          <Route exact path="/" component={Home}/>
+          <Route exact path="/" component={Posts}/>
           <Route path="/login" component={Login}/>
           <Route path="/profile" component={UserProfile}/>
           <Route path="/teams" component={Teams}/>
