@@ -4,9 +4,14 @@ import { connect } from 'react-redux';
 import Home from '../components/Home'
 import ActivityFeed from '../components/ActivityFeed'
 
+import { fetchPosts } from '../actions/fetchPosts'
+
 
 class Posts extends React.Component{
 
+    componentDidMount(){
+        this.props.fetchPosts()
+    }
 
     render(){
 
@@ -15,8 +20,8 @@ class Posts extends React.Component{
         if (loggedIn){
             return (
                 <div>
-                    <ActivityFeed/>
-                </div>          
+                    <ActivityFeed updates={this.props.posts}/>
+                </div>
             )
         } else {
             return (
@@ -29,4 +34,10 @@ class Posts extends React.Component{
 
 }
 
-export default Posts
+const mapStateToProps = (state) => {
+    return {
+        posts: state.userReducer.posts
+    }
+}
+
+export default connect(mapStateToProps, {fetchPosts})(Posts)
