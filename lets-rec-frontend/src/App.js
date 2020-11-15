@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Header from './components/Header'
-import Home from './components/Home'
 import Login from './components/Login'
 import NavBar from './components/NavBar'
 import Posts from './containers/Posts'

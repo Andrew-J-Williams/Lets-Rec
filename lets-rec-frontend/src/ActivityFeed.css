@@ -1,3 +1,8 @@
+.feed-title {
+    position: relative;
+    left: 285px
+}
+
 .updates-container {
     background-color: white;
     padding: 30px;
@@ -7,9 +12,6 @@
     box-shadow: 1px 1px 3px lightgray;
     border-radius: 10px;
     overflow: auto;
-    float: left;
-    position: fixed;
-    left: 150px;
 }
 
 .user-post-container {

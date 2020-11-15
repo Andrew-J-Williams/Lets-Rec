@@ -13,8 +13,9 @@ class ActivityFeed extends React.Component{
         console.log(teamIds.includes(1))
 
         return(
+            <div>
+            <h1 className="feed-title">Activity Feed</h1>
             <div className="updates-container">
-                <h1>Activity Feed</h1>
                 {postsArray.map(post => {
                     if (teamIds.includes(post.team_id)){
                         console.log(post.team_id)
@@ -29,6 +30,7 @@ class ActivityFeed extends React.Component{
                     }
                     }
                 )}
+            </div>
             </div>
         )
     }
