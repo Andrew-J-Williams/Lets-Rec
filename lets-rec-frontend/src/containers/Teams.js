@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import FindTeams from '../components/FindTeams'
+import TeamCreator from '../components/TeamCreator'
 import TeamsProfile from '../containers/TeamsProfile'
 
 import { fetchTeams } from '../actions/fetchTeams'
@@ -18,6 +19,7 @@ class Teams extends React.Component {
             <div>
                 <TeamsProfile teams={this.props.teams}/>
                 <FindTeams teams={this.props.teams}/>
+                <TeamCreator/>
             </div>
             
         )
