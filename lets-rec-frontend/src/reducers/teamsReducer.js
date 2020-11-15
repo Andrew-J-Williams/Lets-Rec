@@ -1,4 +1,13 @@
 const initialState = {
+    team: {
+        name: '',
+        sport: '',
+        location: '',
+        venue: '',
+        timeslot: '',
+        status: '',
+        members: 0,
+    },
     manyTeams: []
 }
 

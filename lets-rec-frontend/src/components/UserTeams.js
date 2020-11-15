@@ -6,7 +6,6 @@ class UserTeams extends React.Component {
 
     render(){
         const teamsArray = this.props.teams
-        const userName = localStorage.username
         const userTeams = JSON.parse(localStorage.getItem('teams'))
         const userTeamsIds = userTeams.map(team => team.id)
 
