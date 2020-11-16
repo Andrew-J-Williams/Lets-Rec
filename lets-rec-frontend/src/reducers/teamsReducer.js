@@ -7,10 +7,13 @@ const initialState = {
         timeslot: '',
         status: '',
         members: 0,
+        users: []
     },
     manyTeams: [],
-    user_id: 0,
-    team_id: 0
+    user_team: {
+        user_id: 0,
+        team_id: 0
+    }
 }
 
 export default function teamsReducer (state=initialState, action) {
@@ -26,8 +29,7 @@ export default function teamsReducer (state=initialState, action) {
             }
         case 'CREATE_USER_TEAMS':
             return {
-                user_id: action.payload,
-                team_id: action.payload
+                user_team: action.payload
             }
         default:
             return state 

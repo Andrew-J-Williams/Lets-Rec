@@ -6,24 +6,26 @@ class UserTeams extends React.Component {
 
     render(){
         const teamsArray = this.props.teams
+        console.log(teamsArray)
         const userTeams = JSON.parse(localStorage.getItem('teams'))
-        const userTeamsIds = userTeams.map(team => team.id)
+        const userTeamsArray = []
+        userTeams.forEach(team => {userTeamsArray.push(team.id)})
 
     return(
         <div className="user-teams-container">
             <h2 className="user-teams-title">My Teams</h2>
-            {teamsArray.map(team => {
-                if (userTeamsIds.includes(team.id)){
+            {this.props.teams.map(team => {
+                if (userTeamsArray.includes(team.id)){
                     return(
                     <div key={team.id} className="team-container">
                         <div className="team-circle">
                             <h3 className="team-name">{team.name}</h3>
                             <h5>{team.sport}</h5>
                         </div>
-                        <div className="members-circle">
+                        <div key={team.id} className="members-circle">
                             <ul>
-                                {team.users.map(user =>
-                                    <li><img src={user.picture} alt="member-bubble" className="member-circle"/></li>    
+                                {team.users.map(user => 
+                                    <li key={user.id}><img src={user.picture} alt="member-bubble" className="member-circle"/></li>    
                                 )}
                             </ul>
                         </div>

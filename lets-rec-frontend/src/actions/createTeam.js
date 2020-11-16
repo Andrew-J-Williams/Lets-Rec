@@ -1,6 +1,6 @@
-export function createTeam(info, userId){
+export function createTeam(info){
     return (dispatch) => {
-        fetch('http://localhost:3000/api/v1/teams', {
+        fetch(`http://localhost:3000/api/v1/teams`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -13,14 +13,16 @@ export function createTeam(info, userId){
             console.log(team)
 
             dispatch(makeTeam(team))
-            window.location.reload()
         })
     }
 }
 
 export function createUserTeams(userId, teamId){
 
-
+    const data = {
+        user_id: userId,
+        team_id: teamId
+    }
 
     return (dispatch) => {
         fetch('http://localhost:3000/api/v1/user_teams', {
@@ -29,11 +31,12 @@ export function createUserTeams(userId, teamId){
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
-            body: JSON.stringify(info)
+            body: JSON.stringify(data)
         })
         .then(response => response.json())
         .then(userteam => {
-            
+            console.log(userteam)
+            dispatch(makeConnection(userteam))
         })
     }
 }
@@ -43,8 +46,7 @@ const makeTeam = input => ({
     payload: input
 })
 
-const makeConnection = (user, team) => ({
+const makeConnection = userteam => ({
     type: 'CREATE_USER_TEAMS',
-    user_id: user,
-    team_id: team
+    payload: userteam
 })

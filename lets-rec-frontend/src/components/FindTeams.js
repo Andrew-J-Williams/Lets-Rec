@@ -6,7 +6,6 @@ class FindTeams extends React.Component {
 
     render(){
         const myArray = this.props.teams
-        console.log(...myArray)
 
         return(
             <div className="find-teams-container">
