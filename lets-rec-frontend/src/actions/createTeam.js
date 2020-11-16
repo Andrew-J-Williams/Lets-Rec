@@ -12,6 +12,11 @@ export function createTeam(info){
         .then(team => {
             console.log(team)
 
+            const userTeamsArray = JSON.parse(localStorage.getItem('teams'))
+            userTeamsArray.push(team)
+            console.log(userTeamsArray)
+            localStorage.setItem("teams", JSON.stringify(userTeamsArray))
+
             dispatch(makeTeam(team))
         })
     }
