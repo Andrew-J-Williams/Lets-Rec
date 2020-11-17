@@ -23,7 +23,7 @@ class UserTeams extends React.Component {
                     return(
                     <div key={team.id} className="team-container">
                         <div className="team-circle">
-                            <h3 className="team-name"><Link to={`/teamspage/${team.id}`} component={TeamPage}>{team.name}</Link></h3>
+                            <h3 className="team-name"><Link to={`/teamspage/${team.id}`}>{team.name}</Link></h3>
                             <h5>{team.sport}</h5>
                         </div>
                         <div key={team.id} className="members-circle">
