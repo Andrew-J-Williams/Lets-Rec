@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import '../UserTeams.css'
 
 class UserTeams extends React.Component {
@@ -20,7 +22,7 @@ class UserTeams extends React.Component {
                     return(
                     <div key={team.id} className="team-container">
                         <div className="team-circle">
-                            <h3 className="team-name">{team.name}</h3>
+                            <h3 className="team-name"><Link to={`/teams/${team.name}`}>{team.name}</Link></h3>
                             <h5>{team.sport}</h5>
                         </div>
                         <div key={team.id} className="members-circle">
