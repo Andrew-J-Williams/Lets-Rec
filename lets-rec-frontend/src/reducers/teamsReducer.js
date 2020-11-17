@@ -31,6 +31,10 @@ export default function teamsReducer (state=initialState, action) {
             return {
                 user_team: action.payload
             }
+        case 'FETCH_TEAM':
+            return {
+                team: action.payload
+            }
         default:
             return state 
     }
