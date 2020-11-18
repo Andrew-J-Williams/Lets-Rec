@@ -1,6 +1,7 @@
 import React from 'react';
-
 import { connect } from 'react-redux';
+
+import PostCreator from '../components/PostCreator'
 
 import { fetchPosts } from '../actions/fetchPosts'
 
@@ -16,11 +17,13 @@ class TeamPosts extends React.Component{
         console.log(this.props.posts)
         console.log(this.props.team)
 
+        const postList = this.props.posts
         const teamId = this.props.team.id
 
         return(
             <div className="team-activity-container">
-                {this.props.posts.map(post => {
+                <PostCreator/>
+                {postList.map(post => {
 
                     if(post.team_id === teamId){
                         return(
