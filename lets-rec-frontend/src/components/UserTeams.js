@@ -3,7 +3,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import '../UserTeams.css'
-import TeamPage from './TeamPage';
 
 class UserTeams extends React.Component {
 
