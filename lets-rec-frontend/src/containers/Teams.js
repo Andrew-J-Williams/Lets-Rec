@@ -13,13 +13,26 @@ class Teams extends React.Component {
         this.props.fetchTeams()
     }
 
-    render(){
+    onLoad(){
+        let myValue = true
 
+        if (! localStorage.pageVisit){
+            localStorage.setItem("pageVisit", myValue);
+            window.location.reload();
+        } else if (localStorage.pageVisit === "true"){
+            console.log("You've been here!")
+            window.location.reload();
+            localStorage.pageVisit = false
+        } 
+    }
+
+    render(){
+        this.onLoad()
         return (
             <div>
-                <UserTeams teams={this.props.teams}/>
-                <FindTeams teams={this.props.teams}/>
-                <TeamCreator teams={this.props.teams}/>
+                <UserTeams teams={this.props.teamsList}/>
+                <FindTeams teams={this.props.teamsList}/>
+                <TeamCreator teams={this.props.teamsList}/>
             </div>
             
         )
@@ -29,7 +42,7 @@ class Teams extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        teams: state.teamsReducer.manyTeams
+        teamsList: state.teamsReducer.manyTeams
     }
 }
 

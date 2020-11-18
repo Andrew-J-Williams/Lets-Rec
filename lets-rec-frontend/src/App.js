@@ -6,9 +6,7 @@ import NavBar from './components/NavBar'
 import Posts from './containers/Posts'
 import UserProfile from './containers/UserProfile'
 import Teams from './containers/Teams'
-import TeamPage from './components/TeamPage';
-
-
+import TeamPage from './containers/TeamPage'
 
 import './App.css'
 
@@ -32,8 +30,8 @@ class App extends React.Component {
           <Route exact path="/" component={Posts}/>
           <Route path="/login" component={Login}/>
           <Route path="/profile" component={UserProfile}/>
-          <Route path="/teams" component={Teams}/>
-          <Route path="/teamspage/:id" component={TeamPage}/>
+          <Route exact path="/teams" component={Teams}/>
+          <Route exact path="/teams/:id" component={TeamPage}/>
         </Switch>
       </div>
       </Router>
