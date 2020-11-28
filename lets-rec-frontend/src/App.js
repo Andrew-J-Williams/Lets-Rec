@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Login from './components/Login'
 import NavBar from './components/NavBar'
 import Posts from './containers/Posts'
+import Signup from './components/Signup'
 import UserProfile from './containers/UserProfile'
 import Teams from './containers/Teams'
 import TeamPage from './containers/TeamPage'
@@ -29,6 +30,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={Posts}/>
           <Route path="/login" component={Login}/>
+          <Route path="/signup" component={Signup}/>
           <Route path="/profile" component={UserProfile}/>
           <Route exact path="/teams" component={Teams}/>
           <Route exact path="/teams/:id" component={TeamPage}/>

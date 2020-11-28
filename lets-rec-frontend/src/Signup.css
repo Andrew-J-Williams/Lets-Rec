@@ -1,0 +1,20 @@
+.sign-up-div {
+    background-color: white;
+    height: 400px;
+    width: 400px;
+    position: relative;
+    margin: auto;
+    box-shadow: 0px 1px 3px lightgray;
+    border-radius: 10px;
+}
+
+.sign-up-title{
+    text-align: center;
+    color: firebrick;
+    position: relative;
+    top: 50px;
+    font-size: 20px;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 25px;
+}

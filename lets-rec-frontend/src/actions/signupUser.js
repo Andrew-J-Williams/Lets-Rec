@@ -1,4 +1,4 @@
-export const signUpUser = (info, history) => {
+export const signUserUp = (info, history) => {
     return (dispatch) => {
         fetch('http://localhost:3000/api/v1/signup', {
             method: 'POST',
