@@ -19,10 +19,11 @@ class TeamPosts extends React.Component{
 
         const postList = this.props.posts
         const teamId = this.props.team.id
+        const teamInfo = this.props.team
 
         return(
             <div className="team-activity-container">
-                <PostCreator/>
+                <PostCreator currentTeam={teamInfo}/>
                 {postList.map(post => {
 
                     if(post.team_id === teamId){

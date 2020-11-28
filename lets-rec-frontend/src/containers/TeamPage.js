@@ -62,23 +62,3 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps, {fetchTeam})(TeamPage)
-
-/*
-    <div>
-                <div className="team-info-container">
-                    <h1>{teamObject.name}</h1>
-                    <h2>{teamObject.location}</h2>
-                    <h2>{teamObject.users.length} Members</h2>
-                    <h3>Sport: {teamObject.sport}</h3>
-                    <h3>Venue: {teamObject.venue}</h3>
-                    <h3>Time Slot: {teamObject.timeslot}</h3>
-
-                    {teamObject.users.map(user => {
-                        return(
-                            <div key={user.id}>
-                                <h4>{user.username}</h4>
-                            </div>
-                        )
-                    })}
-                </div>
-*/

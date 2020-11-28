@@ -1,11 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import { createPost } from '../actions/createPost'
+
 class PostCreator extends React.Component{
 
 
     state = {
-        content: ''
+        content: '',
+        user_id: parseInt(localStorage.currentUser, 10),
+        team_id: this.props.currentTeam.id
     }
 
     handleOnChange = (event) => {
@@ -17,10 +21,14 @@ class PostCreator extends React.Component{
 
     handleOnSubmit = (event) => {
         event.preventDefault()
-        
+
+        this.props.createPost(this.state)
+        window.location.reload()
     }
 
     render(){
+        console.log("@"+this.props.currentTeam.name.split(" ").join(""))
+
         return(
             <div>
                 <form onSubmit={this.handleOnSubmit}>
@@ -39,4 +47,4 @@ class PostCreator extends React.Component{
 
 }
 
-export default PostCreator
+export default connect(null, {createPost})(PostCreator)

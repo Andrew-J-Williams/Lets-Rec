@@ -7,8 +7,8 @@ const initialState = {
 
 export default function signupReducer (state=initialState, action) {
     
-    return state
-    //switch(action.type){
-    //    
-    //}
+    switch(action.type){
+        case "CREATE_USER":
+            return action.payload 
+    }
 }
