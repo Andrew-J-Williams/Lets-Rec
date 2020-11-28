@@ -1,6 +1,6 @@
 .sign-up-div {
     background-color: white;
-    height: 400px;
+    height: 430px;
     width: 400px;
     position: relative;
     margin: auto;
@@ -17,4 +17,66 @@
     font-weight: 200;
     font-style: italic;
     font-size: 25px;
+}
+
+.sign-up-form {
+    margin: auto;
+    position: relative;
+    padding: 10px;
+    left: 95px;
+    top: 30px;
+}
+
+.sign-up-username {
+    margin: 10px;
+    padding: 10px;
+}
+
+.sign-up-email {
+    margin: 10px;
+    padding: 10px;
+}
+
+.sign-up-picture {
+    margin: 10px;
+    padding: 10px;
+}
+
+.sign-up-password {
+    margin: 10px;
+    padding: 10px;
+}
+
+.sign-up-button {
+    margin: 10px;
+    padding: 10px;
+    width: 150px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    left: 9px;
+    border-radius: 25px;
+    background-color: white;
+    border-color: firebrick;
+    border-style: solid;
+    border-width: 2px;
+    color: firebrick;
+    font-weight: 200;
+    font-style: bold;
+    transition-duration: 0.3s;
+}
+
+.sign-up-button:hover {
+    background-color: #ffe7ec;
+    transition-duration: 0.3s;
+}
+
+.sign-up-button:focus {
+    outline: 2px solid firebrick;
+    outline-style: auto;
+}
+
+input:focus{
+    outline: 2px solid firebrick;
+    outline-style: auto;
 }

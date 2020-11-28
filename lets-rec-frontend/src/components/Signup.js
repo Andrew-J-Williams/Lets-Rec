@@ -30,6 +30,45 @@ class Signup extends React.Component {
         return(
             <div className="sign-up-div">
                 <h3 className="sign-up-title">Sign Up</h3>
+                <form onSubmit={this.handleOnSubmit} className="sign-up-form">
+                <input
+                        name="username"
+                        placeholder="Username"
+                        value={this.state.username}
+                        onChange={this.handleOnChange}
+                        className="sign-up-username"
+                    ></input>
+                    <br></br>
+                    <input
+                        name="email"
+                        placeholder="Email"
+                        value={this.state.email}
+                        onChange={this.handleOnChange}
+                        className="sign-up-email"
+                    ></input>
+                    <br></br>
+                    <input
+                        name="picture"
+                        placeholder="Picture URL"
+                        value={this.state.picture}
+                        onChange={this.handleOnChange}
+                        className="sign-up-picture"
+                    ></input>
+                    <br></br>
+                    <input
+                        name="password"
+                        className="sign-up-password"
+                        placeholder="Password"
+                        type="password"
+                        value={this.state.password}
+                        onChange={this.handleOnChange}
+                    ></input>
+                    <br></br>
+                    <button
+                        type="submit"
+                        className="sign-up-button"
+                    >Create Account!</button>
+                </form>
             </div>
         )
     }
