@@ -24,7 +24,7 @@ export const logUserIn = (info, history) => {
                 localStorage.setItem("pic", user.picture)
 
                 dispatch(getUser(user))
-                history.push(`/profile`)
+                history.push('/profile')
                 window.location.reload()
             }
         })

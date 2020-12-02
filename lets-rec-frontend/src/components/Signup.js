@@ -48,20 +48,20 @@ class Signup extends React.Component {
                     ></input>
                     <br></br>
                     <input
-                        name="picture"
-                        placeholder="Picture URL"
-                        value={this.state.picture}
-                        onChange={this.handleOnChange}
-                        className="sign-up-picture"
-                    ></input>
-                    <br></br>
-                    <input
                         name="password"
                         className="sign-up-password"
                         placeholder="Password"
                         type="password"
                         value={this.state.password}
                         onChange={this.handleOnChange}
+                    ></input>
+                    <br></br>
+                    <input
+                        name="picture"
+                        placeholder="Picture URL"
+                        value={this.state.picture}
+                        onChange={this.handleOnChange}
+                        className="sign-up-picture"
                     ></input>
                     <br></br>
                     <button

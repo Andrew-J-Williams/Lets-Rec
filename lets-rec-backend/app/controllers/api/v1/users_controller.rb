@@ -1,5 +1,7 @@
 class Api::V1::UsersController < ApplicationController
 
+    wrap_parameters :user, include: [:username, :email, :password, :picture]
+
     def index
         @users = User.all
 
@@ -27,7 +29,7 @@ class Api::V1::UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:id, :username, :email, :password)
+        params.require(:user).permit(:id, :username, :email, :password, :picture)
     end
 
 end
