@@ -23,7 +23,6 @@ class PostCreator extends React.Component{
         event.preventDefault()
 
         this.props.createPost(this.state)
-        window.location.reload()
     }
 
     render(){

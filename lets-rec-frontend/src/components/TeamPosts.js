@@ -22,9 +22,10 @@ class TeamPosts extends React.Component{
         const teamInfo = this.props.team
 
         return(
-            <div className="team-activity-container">
+            <div>
                 <PostCreator currentTeam={teamInfo}/>
-                {postList.map(post => {
+                <div id="team-activity-container" className="team-activity-container">
+                    {postList.map(post => {
 
                     if(post.team_id === teamId){
                         return(
@@ -38,6 +39,7 @@ class TeamPosts extends React.Component{
                     }
 
                 })}
+                </div>
             </div>
         )
 

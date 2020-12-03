@@ -33,7 +33,7 @@ class TeamPage extends React.Component {
         return(
             <div>
                 <div className="team-info-container">
-                    <h1>{teamObject.name}</h1>
+                    <h1 id="team-page-name">{teamObject.name}</h1>
                     <h2>{teamObject.location}</h2>
                     <h2>{teamObject.users.length} Members</h2>
                     <h3>Sport: {teamObject.sport}</h3>
