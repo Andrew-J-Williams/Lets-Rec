@@ -1,5 +1,3 @@
-import { createElement } from "react"
-
 export function createPost(userContent){
     
 
@@ -30,7 +28,7 @@ export function createPost(userContent){
             img.classList.add("post-picture")
             img.alt = "profile-icon"
             h5.classList.add("post-username")
-            h5.innerText = post.user.username
+            h5.innerText = localStorage.username
             p1.classList.add("post-content")
             p1.innerHTML = `<b>${teamName}</b>` + ` ` + `${post.content}`
 
@@ -39,7 +37,6 @@ export function createPost(userContent){
             div.append(p1)
 
             teamPostsContainer.prepend(div)
-
         })
     }
 }

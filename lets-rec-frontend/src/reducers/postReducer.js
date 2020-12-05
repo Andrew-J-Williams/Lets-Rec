@@ -10,9 +10,13 @@ export default function postReducer (state=initialState, action) {
 
     switch(action.type){
         case 'CREATE_POST':
-        return{
+        return {
             post: action.payload
         }
+        case 'DELETE_POST':
+            return initialState
+        default:
+            return state
     }
 
 }

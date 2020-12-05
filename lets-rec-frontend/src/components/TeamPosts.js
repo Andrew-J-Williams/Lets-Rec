@@ -4,6 +4,9 @@ import { connect } from 'react-redux';
 import PostCreator from '../components/PostCreator'
 
 import { fetchPosts } from '../actions/fetchPosts'
+import { deletePost } from '../actions/deletePost'
+
+import '../UserActivity.css'
 
 class TeamPosts extends React.Component{
 
@@ -11,7 +14,7 @@ class TeamPosts extends React.Component{
     componentDidMount(){
         this.props.fetchPosts()
     }
-
+ 
     render(){
 
         console.log(this.props.posts)
@@ -34,6 +37,7 @@ class TeamPosts extends React.Component{
                                 <h5 className="post-username">{post.user.username}</h5>
                                 <p className="post-content"><b>@{post.team.name.split(" ").join("")}</b> {post.content}</p>
                                 <p className="post-time">{post.created_at}</p>
+                                <img src="https://i.imgur.com/dbzNiXR.png" className="delete-icon" alt="delete-icon" onClick={() => deletePost(post.id)}/>
                         </div>
                         )
                     }
@@ -53,4 +57,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {fetchPosts})(TeamPosts)
+export default connect(mapStateToProps, {fetchPosts, deletePost})(TeamPosts)
