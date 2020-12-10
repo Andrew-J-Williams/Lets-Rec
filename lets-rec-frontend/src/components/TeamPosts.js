@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import PostCreator from '../components/PostCreator'
+import Post from '../components/Post'
 
 import { fetchPosts } from '../actions/fetchPosts'
 import { deletePost } from '../actions/deletePost'
@@ -31,14 +32,19 @@ class TeamPosts extends React.Component{
                     {postList.map(post => {
 
                     if(post.team_id === teamId){
-                        return(
-                        <div key={post.id} className="user-post-container">
+                       /* return(
+                            <div key={post.id} className="user-post-container">
                                 <img src={post.user.picture} className="post-picture" alt="profile-icon"/>
                                 <h5 className="post-username">{post.user.username}</h5>
                                 <p className="post-content"><b>@{post.team.name.split(" ").join("")}</b> {post.content}</p>
                                 <p className="post-time">{post.created_at}</p>
                                 <img src="https://i.imgur.com/dbzNiXR.png" className="delete-icon" alt="delete-icon" onClick={() => deletePost(post.id)}/>
-                        </div>
+                            </div>
+                        )*/
+                        return(
+                            <div key={post.id}>
+                                <Post currentPost={post} deletePost={this.props.deletePost}/>
+                            </div>
                         )
                     }
 

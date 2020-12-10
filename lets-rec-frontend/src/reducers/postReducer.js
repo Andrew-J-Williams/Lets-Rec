@@ -1,4 +1,5 @@
 const initialState = {
+    posts: [],
     post: {
         content:'',
         user_id: 0,

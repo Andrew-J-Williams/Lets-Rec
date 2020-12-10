@@ -23,6 +23,11 @@ export default function userReducer (state=initialState, action) {
             return {
                 posts: action.payload
             }
+        case 'REMOVE_POST':
+            const posts = state.posts.filter(status => status.id !== action.id)
+            return {
+                posts
+            }
         default:
             return state 
     }
