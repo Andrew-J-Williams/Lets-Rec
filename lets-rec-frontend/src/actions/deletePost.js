@@ -5,8 +5,9 @@ export function deletePost(post_id){
             method: "DELETE",
         })
         .then(data => {
+            const findPost = document.getElementById(`${post_id}`)
+            findPost.remove()
             dispatch(removePost(data))
-            window.location.reload()
         })
     }
 }  

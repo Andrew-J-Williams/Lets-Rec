@@ -18,7 +18,7 @@
 .log-in {
     position: relative;
     left: 1250px;
-    bottom: 80px;
+    bottom: 108px;
     color: black;
     font-weight: 300;
     transition-duration: 0.3s;
@@ -40,9 +40,9 @@
     height: 30px;
     width: 30px;
     border-radius: 50%;
-    position: fixed;
-    right: 190px;
-    top: 45px;
+    position: relative;
+    top: -60px;
+    left: 1200px;
 }
 
 .log-in-link {

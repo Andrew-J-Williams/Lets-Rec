@@ -2,6 +2,9 @@
     background-color: white;
     margin: auto;
     width: 700px;
+    box-shadow: 1px 1px 3px lightgray;
+    border-radius: 10px;
+    overflow: auto;
 }
 
 .user-teams-title {
@@ -11,7 +14,7 @@
 
 .team-circle {
     background-color: firebrick;
-    border-radius: 50%;
+    border-radius: 5%;
     height: 300px;
     width: 300px;
     overflow: auto;
@@ -20,13 +23,6 @@
     text-align: center;
     box-shadow: 1px 1px 3px lightgray;
     transition: 0.3s;
-}
-
-.team-circle:hover {
-    height: 400px;
-    width: 400px;
-    transition: 0.3s;
-    cursor: pointer;
 }
 
 .team-name {
@@ -47,7 +43,7 @@
 .members-circle {  
     position: relative;
     left: 300px;
-    top: -270px;
+    top: -120px;
     width: 100px;
     background-color: white;
     transition: 0.3s;

@@ -1,5 +1,7 @@
 export function createPost(userContent){
     
+    console.log(userContent.team_id)
+
 
     return (dispatch) => {
         fetch('http://localhost:3000/api/v1/posts', {
@@ -10,7 +12,7 @@ export function createPost(userContent){
             },
             body: JSON.stringify(userContent)
         })
-        .then(response => response.json())
+        .then(resp => resp.json())
         .then(post => {
             console.log(post)
             dispatch(makePost(post))

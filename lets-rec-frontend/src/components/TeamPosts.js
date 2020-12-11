@@ -20,6 +20,7 @@ class TeamPosts extends React.Component{
 
         console.log(this.props.posts)
         console.log(this.props.team)
+        console.log(this.props.team.id)
 
         const postList = this.props.posts
         const teamId = this.props.team.id
@@ -42,9 +43,7 @@ class TeamPosts extends React.Component{
                             </div>
                         )*/
                         return(
-                            <div key={post.id}>
-                                <Post currentPost={post} deletePost={this.props.deletePost}/>
-                            </div>
+                                <Post key={post.id} currentPost={post} deletePost={this.props.deletePost}/>
                         )
                     }
 

@@ -1,6 +1,7 @@
 class Api::V1::PostsController < ApplicationController
 
     before_action :set_post, only: [:show, :update, :destroy]
+    wrap_parameters :post, include: [:content, :user_id, :team_id]
 
     def index
         @posts = Post.all
@@ -37,7 +38,7 @@ class Api::V1::PostsController < ApplicationController
     private
 
     def post_params
-        params.require(:post).permit(:id, :content, :user_id, :team_id)
+        params.require(:post).permit(:content, :user_id, :team_id)
     end
 
     def set_post

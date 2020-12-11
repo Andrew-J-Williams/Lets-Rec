@@ -22,8 +22,9 @@ class UserTeams extends React.Component {
                     return(
                     <div key={team.id} className="team-container">
                         <div className="team-circle">
-                            <h3 className="team-name"></h3>
+                            <h3 className="team-name">{team.name}</h3>
                             <h5>{team.sport}</h5>
+                            <h5>{team.members} members</h5>
                         </div>
                         <div key={team.id} className="members-circle">
                             <ul>

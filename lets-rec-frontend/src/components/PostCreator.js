@@ -27,6 +27,8 @@ class PostCreator extends React.Component{
 
     render(){
         console.log("@"+this.props.currentTeam.name.split(" ").join(""))
+        console.log(this.props.currentTeam.id)
+        console.log(parseInt(localStorage.currentUser, 10))
 
         return(
             <div>
