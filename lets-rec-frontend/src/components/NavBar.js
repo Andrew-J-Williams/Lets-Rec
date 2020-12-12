@@ -7,9 +7,9 @@ const NavBar = () => {
     return (
       <div className="navbar">
         <ul>
-            <li><NavLink to="/" className="navlink">Home</NavLink></li>
-            <li><NavLink to="/profile" className="navlink">Profile</NavLink></li>
-            <li><NavLink to="/teams" className="navlink">Teams</NavLink></li>
+            <li><NavLink to="/" className="navlink"><img src="https://i.imgur.com/jsHS4EM.png" className="icon-set" alt="home-icon"/></NavLink></li>
+            <li><NavLink to="/profile" className="navlink"><img src="https://i.imgur.com/VKSizY2.jpg" className="icon-set" alt="profile-icon"/></NavLink></li>
+            <li><NavLink to="/teams" className="navlink"><img src="https://i.imgur.com/xj9gjPC.png" className="icon-set" alt="jersey-icon"/></NavLink></li>
         </ul>
       </div>
     );

@@ -18,7 +18,7 @@
 .log-in {
     position: relative;
     left: 1250px;
-    bottom: 108px;
+    bottom: 155px;
     color: black;
     font-weight: 300;
     transition-duration: 0.3s;
@@ -41,10 +41,16 @@
     width: 30px;
     border-radius: 50%;
     position: relative;
-    top: -60px;
+    top: -107px;
     left: 1200px;
 }
 
 .log-in-link {
     text-decoration: none;
+}
+
+.nav-bar-div {
+    position: relative;
+    top: -67px;
+    left: 1000px;
 }

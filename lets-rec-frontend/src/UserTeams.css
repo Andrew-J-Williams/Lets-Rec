@@ -10,6 +10,8 @@
 .user-teams-title {
     font-weight: 200;
     color: firebrick;
+    position: relative;
+    left: 20px;
 }
 
 .team-circle {

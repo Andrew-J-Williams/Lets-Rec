@@ -2,7 +2,6 @@ import React from 'react';
 
 import Header from './components/Header'
 import Login from './components/Login'
-import NavBar from './components/NavBar'
 import Posts from './containers/Posts'
 import Signup from './components/Signup'
 import UserProfile from './containers/UserProfile'
@@ -26,7 +25,6 @@ class App extends React.Component {
       <Router>
       <div className="App">
         <Header/>
-        <NavBar/>
         <Switch>
           <Route exact path="/" component={Posts}/>
           <Route path="/login" component={Login}/>

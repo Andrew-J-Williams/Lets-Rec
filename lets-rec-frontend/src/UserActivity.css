@@ -10,6 +10,7 @@
     float: left;
     position: fixed;
     left: 150px;
+    top: 180px;
 }
 
 .user-post-container {
@@ -29,7 +30,7 @@
 .my-activity-feed {
     font-weight: 200;
     position: fixed;
-    top: 193px;
+    top: 161px;
     left: 170px;
     background-color: white;
     margin-bottom: 20px;

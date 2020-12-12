@@ -6,7 +6,7 @@ ul {
 }
 
 li {
-    display: block;
+    display: inline-block;
     padding: 8px 16px;
 }
 
@@ -17,4 +17,10 @@ li:hover {
 .navlink {
     text-decoration: none;
     color: #000;
+    float: left;
+}
+
+.icon-set {
+    height: 20px;
+    width: 20px;
 }

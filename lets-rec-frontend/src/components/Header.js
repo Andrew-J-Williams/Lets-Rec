@@ -1,4 +1,5 @@
 import React from 'react';
+import NavBar from '../components/NavBar'
 
 import '../Header.css'
 
@@ -16,6 +17,9 @@ const Header = () => {
             </a>
             { loggedIn ? 
             <div>
+                <div className="nav-bar-div">
+                    <NavBar/>
+                </div>
                 <img src={pic} alt="icon" className="log-in-pic"/>
                 <h4 className="log-in">{username}</h4>
             </div> 
