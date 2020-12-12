@@ -41,7 +41,7 @@ class TeamCreator extends React.Component {
         console.log(parseInt(localStorage.currentUser, 10))
         return(
             <div className="team-creator-container">
-                <h1>CREATE TEAM!</h1>
+                <h1>CREATE A TEAM!</h1>
                 <form onSubmit={this.handleOnSubmit}>
                     <label>Team Name: </label>
                     <input

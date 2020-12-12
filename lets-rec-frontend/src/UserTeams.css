@@ -9,13 +9,13 @@
 
 .user-teams-title {
     font-weight: 200;
-    color: firebrick
+    color: firebrick;
 }
 
 .team-circle {
     background-color: firebrick;
     border-radius: 5%;
-    height: 300px;
+    height: 200px;
     width: 300px;
     overflow: auto;
     margin: auto;
@@ -25,26 +25,67 @@
     transition: 0.3s;
 }
 
+.team-circle:hover {
+    height: 220px;
+    width: 320px;
+    transition: 0.3s;
+}
+
 .team-name {
     color: #f1f1f1;
     font-weight: 300;
     text-align: center;
     position: relative;
-    top: 118px;
+}
+
+.team-classification {
+    font-weight: 300;
+    color: white;
+}
+
+.members-circle {
+    margin: auto;
+    width: auto;
+    max-width: 190px;
+    position: relative;
+    top: -110px;
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+    overflow: auto;
 }
 
 .member-circle {
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     border-radius: 50%;
-    box-shadow: 1px 1px 3px lightgray;
+    box-shadow: 1px 1px 3px rgb(43, 43, 43);
+    position: relative;
+    margin-right: -60px;
+    transition: 0.3s;
 }
 
-.members-circle {  
-    position: relative;
-    left: 300px;
-    top: -120px;
-    width: 100px;
-    background-color: white;
+.member-circle:hover {
+    height: 40px;
+    width: 40px;
+    margin-right: -30px;
+    margin-left: 2px;
     transition: 0.3s;
+}
+
+.members-list {
+    margin: auto;
+    position: relative;
+    width: 300px;
+    list-style-type: none;
+    overflow: auto;
+}
+
+.member-li {
+    display: inline;
+    float: left;
+}
+
+a {
+    text-decoration: none;
 }

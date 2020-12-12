@@ -1,6 +1,6 @@
 User.where(username: "_captainjilliams_").first_or_create(username: "_captainjilliams_", email:"andy@test.com", password:"password", picture: "https://media-exp1.licdn.com/dms/image/C4E03AQFiy3mXVKA0SQ/profile-displayphoto-shrink_400_400/0?e=1612396800&v=beta&t=djH_Y7cwdAfk7tQhlPu_bnJEnq4_RiWG9MmNxy82SxI")
 User.where(username: "Bailee").first_or_create(username: "Bailee", email:"bailee@test.com", password:"password", picture: "https://media-exp1.licdn.com/dms/image/C4E03AQHRQ_nYYNxGvw/profile-displayphoto-shrink_400_400/0/1599794681270?e=1612396800&v=beta&t=ylQCDdnK9NvmO9wk-ayTJFEIO70CazRV3qspi1xPkAE")
-User.where(username: "Ira").first_or_create(username: "Ira", email:"ira@test.com", password:"password", picture: "https://scontent.fhou1-1.fna.fbcdn.net/v/t1.0-9/96233050_10222867490901592_8923575932250226688_o.jpg?_nc_cat=104&ccb=2&_nc_sid=730e14&_nc_ohc=U1uzB8vO_KUAX9bv1sh&_nc_ht=scontent.fhou1-1.fna&oh=7e0c2d680a74f8d4a96e97548c7308e6&oe=5FD11ED1")
+User.where(username: "Ira").first_or_create(username: "Ira", email:"ira@test.com", password:"password", picture: "https://64.media.tumblr.com/3c948972b7be8a79f1436393a3a26281/tumblr_ogw26dCy7A1smd799o1_1280.jpg")
 
 Team.where(name: "SouthSide Bears").first_or_create(
     name: "SouthSide Bears",

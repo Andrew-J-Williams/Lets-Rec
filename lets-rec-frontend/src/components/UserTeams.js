@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import '../UserTeams.css'
 
@@ -19,17 +20,17 @@ class UserTeams extends React.Component {
             <h2 className="user-teams-title">My Teams</h2>
             {this.props.teams.map(team => {
                 if (userTeamsArray.includes(team.id)){
+                    console.log(team)
                     return(
                     <div key={team.id} className="team-container">
                         <div className="team-circle">
-                            <h3 className="team-name">{team.name}</h3>
-                            <h5>{team.sport}</h5>
-                            <h5>{team.members} members</h5>
+                            <Link to={`teams/${team.id}`}><h3 className="team-name">{team.name}</h3></Link>
+                            <h5 className="team-classification">{team.sport} League • {team.members} members</h5>
                         </div>
                         <div key={team.id} className="members-circle">
-                            <ul>
+                            <ul className="members-list">
                                 {team.users.map(user => 
-                                    <li key={user.id}><img src={user.picture} alt="member-bubble" className="member-circle"/></li>    
+                                    <li key={user.id} className="member-li"><img src={user.picture} alt="member-bubble" className="member-circle"/></li>    
                                 )}
                             </ul>
                         </div>
