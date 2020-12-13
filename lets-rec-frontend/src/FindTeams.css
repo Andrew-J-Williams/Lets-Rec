@@ -1,6 +1,12 @@
 .find-teams-container {
     background-color: white;
+    box-shadow: 1px 1px 3px lightgray;
+    border-radius: 10px;
     width: 700px;
+    height: 300px;
     margin: auto;
     text-align: center;
+    position: fixed;
+    left: 600px;
+    top: 180px;
 }

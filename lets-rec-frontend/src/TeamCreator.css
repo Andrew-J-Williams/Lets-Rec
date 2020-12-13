@@ -1,5 +1,10 @@
 .team-creator-container {
     background-color: white;
+    box-shadow: 1px 1px 3px lightgray;
+    border-radius: 10px;
     width: 700px;
     margin: auto;
+    position: fixed;
+    left: 600px;
+    top: 500px;
 }

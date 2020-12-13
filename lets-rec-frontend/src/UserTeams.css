@@ -1,21 +1,29 @@
 .user-teams-container {
     background-color: white;
     margin: auto;
-    width: 700px;
+    width: 400px;
+    height: 500px;
     box-shadow: 1px 1px 3px lightgray;
     border-radius: 10px;
-    overflow: auto;
+    position: fixed;
+    overflow: scroll;
+    padding-top: 60px;
+    left: 50px;
+    top: 150px;
 }
 
 .user-teams-title {
-    font-weight: 200;
-    color: firebrick;
-    position: relative;
-    left: 20px;
+    font-weight: 300;
+    color: black;
+    background-color: white;
+    position: fixed;
+    left: 70px;
+    top: 130px;
+    width: 350px;
+    padding-top: 10px;
 }
 
 .team-circle {
-    background-color: firebrick;
     border-radius: 5%;
     height: 200px;
     width: 300px;
@@ -25,12 +33,12 @@
     text-align: center;
     box-shadow: 1px 1px 3px lightgray;
     transition: 0.3s;
+    overflow: hidden
 }
 
-.team-circle:hover {
-    height: 220px;
-    width: 320px;
-    transition: 0.3s;
+.team-background {
+    height: 200px;
+    width: 300px;
 }
 
 .team-name {
@@ -38,11 +46,20 @@
     font-weight: 300;
     text-align: center;
     position: relative;
+    top: -135px;
+    transition: 0.3s;
+}
+
+.team-name:hover {
+    color: firebrick;
+    transition: 0.3s;
 }
 
 .team-classification {
     font-weight: 300;
     color: white;
+    position: relative;
+    top: -145px;
 }
 
 .members-circle {
@@ -50,10 +67,7 @@
     width: auto;
     max-width: 190px;
     position: relative;
-    top: -110px;
-    border-color: white;
-    border-width: 1px;
-    border-style: solid;
+    top: -80px;
     overflow: auto;
 }
 
