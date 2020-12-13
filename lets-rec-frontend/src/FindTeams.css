@@ -1,12 +1,38 @@
 .find-teams-container {
-    background-color: white;
+    background-image: url("https://i.imgur.com/d4k74Em.png");
+    background-size: cover;
     box-shadow: 1px 1px 3px lightgray;
     border-radius: 10px;
     width: 700px;
-    height: 300px;
+    height: 500px;
     margin: auto;
     text-align: center;
     position: fixed;
     left: 600px;
     top: 180px;
+    overflow: auto;
+}
+
+.search-results {
+    overflow: auto;
+}
+
+.team-result {
+    background-color: firebrick;
+    color: white;
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 3px lightgray;
+    border-radius: 10px;
+}
+
+.button-result {
+    font-weight: 200;
+}
+
+.button-result:hover {
+    cursor: pointer;
 }
