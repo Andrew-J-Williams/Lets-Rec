@@ -1,5 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { createUserTeams } from '../actions/createTeam'
+import { addTeamtoUser } from '../actions/fetchTeam'
 
 import '../FindTeams.css'
 
@@ -29,6 +31,8 @@ class FindTeams extends React.Component {
         const teamId = parseInt(event.target.id, 10)
 
         console.log(`User ID: ${userId}, Team ID: ${teamId}`)
+        this.props.addTeamtoUser(teamId)
+        this.props.createUserTeams(userId, teamId)
     }
 
 
@@ -99,5 +103,5 @@ class FindTeams extends React.Component {
     }
 }
 
-export default FindTeams
+export default connect(null, {createUserTeams, addTeamtoUser})(FindTeams)
 
