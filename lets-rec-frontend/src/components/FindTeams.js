@@ -59,7 +59,7 @@ class FindTeams extends React.Component {
     
 
         return(
-            <div className="find-teams-container">
+            <div className="find-teams-container" id="find-teams-container">
                 <h2 className="find-a-team">Find a Team!</h2>
                 <form className="search-form" onSubmit={this.handleSubmit}>
                     <label for="locations">Choose a Location: </label>
