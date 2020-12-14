@@ -31,9 +31,11 @@ class Teams extends React.Component {
     displayCreator(){
         const findTeamsContainer = document.getElementById("find-teams-container")
         const teamCreatorContainer = document.getElementById("team-creator-container")
+        const teamButton = document.getElementById("create-team-button")
 
         findTeamsContainer.hidden = true
         teamCreatorContainer.hidden = false
+        teamButton.style.display = "none"
     }
 
     render(){
@@ -42,7 +44,7 @@ class Teams extends React.Component {
             <div className="main-teams-container">
                 <UserTeams teams={this.props.teamsList}/>
                 <FindTeams teams={this.props.teamsList}/>
-                <h2 className="create-team-button" onClick={this.displayCreator}>Create a Team!</h2>
+                <h2 className="create-team-button" id="create-team-button" onClick={this.displayCreator}>Create a Team!</h2>
                 <TeamCreator teams={this.props.teamsList}/>
             </div>
             

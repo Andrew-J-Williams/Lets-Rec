@@ -37,48 +37,64 @@ class TeamCreator extends React.Component {
         window.location.reload()
     }
 
+    backToFinder(){
+        const findTeamsContainer = document.getElementById("find-teams-container")
+        const teamCreatorContainer = document.getElementById("team-creator-container")
+        const teamButton = document.getElementById("create-team-button")
+
+        findTeamsContainer.hidden = false
+        teamCreatorContainer.hidden = true
+        teamButton.style.display = "block"
+    }
+
     render(){
         console.log(parseInt(localStorage.currentUser, 10))
         return(
             <div className="team-creator-container" id="team-creator-container" hidden>
-                <h1>CREATE A TEAM!</h1>
-                <form onSubmit={this.handleOnSubmit}>
-                    <label>Team Name: </label>
+                <form className="creator-form" onSubmit={this.handleOnSubmit}>
+                    <h1 className="creator-header">Create Your Team!</h1>
+                    <label className="creator-label">Team Name </label>
                     <input
                     name="name"
+                    className="creator-input-box"
                     value={this.state.name}
                     onChange={this.handleOnChange}
                     ></input>
-                    <br></br>
-                    <label>Sport: </label>
+                    <br></br><br></br>
+                    <label className="creator-label">Sport </label>
                     <input
                     name="sport"
+                    className="creator-input-box"
                     value={this.state.sport}
                     onChange={this.handleOnChange}
                     ></input>
-                    <br></br>
-                    <label>Location: </label>
+                    <br></br><br></br>
+                    <label className="creator-label">Location </label>
                     <input
                     name="location"
+                    className="creator-input-box"
                     value={this.state.location}
                     onChange={this.handleOnChange}
                     ></input>
-                    <br></br>
-                    <label>Venue: </label>
+                    <br></br><br></br>
+                    <label className="creator-label">Venue </label>
                     <input
                     name="venue"
+                    className="creator-input-box"
                     value={this.state.venue}
                     onChange={this.handleOnChange}
                     ></input>
-                    <br></br>
-                    <label>Timeslot: </label>
+                    <br></br><br></br>
+                    <label className="creator-label">Timeslot </label>
                     <input
-                    name="timeslot" 
+                    name="timeslot"
+                    className="creator-input-box" 
                     value={this.state.timeslot}
                     onChange={this.handleOnChange}
                     ></input>
-                    <br></br>
-                    <button type="submit">Submit</button>
+                    <br></br><br></br>
+                    <button className="creator-button" type="submit">Submit</button>
+                    <button className="creator-button" onClick={this.backToFinder}>Back</button>
                 </form>
             </div>
         )
