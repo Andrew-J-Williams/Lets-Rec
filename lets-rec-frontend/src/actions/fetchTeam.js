@@ -4,6 +4,7 @@ export function fetchTeam(teamId){
         .then(response => response.json())
         .then(data => {
             dispatch(getTeam(data))
+            console.log(data)
         })
     }
 }
