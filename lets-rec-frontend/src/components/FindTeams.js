@@ -60,24 +60,7 @@ class FindTeams extends React.Component {
 
         return(
             <div className="find-teams-container" id="find-teams-container">
-                <form className="search-form" onSubmit={this.handleSubmit}>
-                    <h2 className="find-a-team">Find a Team!</h2>
-                    <label for="locations">Choose Location </label>
-                    <select name="location" id="location-search" value={this.state.location} onChange={this.handleInputChange}>
-                        <option>All Locations</option>
-                        {myArray.map(team => 
-                            <option value={team.location} key={team.id}>{team.location}</option>    
-                        )}
-                    </select>
-                    <label>Choose Sport </label>
-                    <select name="sport" value={this.state.sport} onChange={this.handleInputChange}>
-                        <option>All Sports</option>
-                        {myArray.map(team => 
-                            <option value={team.sport} key={team.id}>{team.sport}</option>    
-                        )}
-                    </select>
-                    <button className="search-button" type="submit">Search</button>
-                </form>
+
                 <div className="search-results" id="search-results">
                     {searchTeams.map(team => {
                         console.log(team.users)
@@ -99,6 +82,23 @@ class FindTeams extends React.Component {
                         }
                     })}
                 </div>
+                <form className="search-form" onSubmit={this.handleSubmit}>
+                    <h2 className="find-a-team">Find a Team!</h2>
+                        <select className="search-select"  name="location" id="location-search" value={this.state.location} onChange={this.handleInputChange}>
+                            <option className="search-option">All Locations</option>
+                                {myArray.map(team => 
+                                    <option className="search-option" value={team.location} key={team.id}>{team.location}</option>    
+                                )}
+                        </select>
+                        <select className="search-select" name="sport" value={this.state.sport} onChange={this.handleInputChange}>
+                            <option className="search-option">All Sports</option>
+                                {myArray.map(team => 
+                                    <option className="search-option" value={team.sport} key={team.id}>{team.sport}</option>    
+                                )}
+                        </select>
+                    <br></br><br></br>
+                    <button className="search-button" type="submit">Search</button>
+                </form>
             </div>
         )
     }

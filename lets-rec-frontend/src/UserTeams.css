@@ -107,6 +107,17 @@ a {
     text-decoration: none;
 }
 
+.create-button-container{
+    margin: auto;
+    text-align: center;
+    position: fixed;
+    left: 207px;
+    background-color: white;
+    height: 60px;
+    width: 300px;
+    top: 620px;
+}
+
 .create-team-button{
     background-color: firebrick;
     color: white;
@@ -116,6 +127,9 @@ a {
     height: 35px;
     transition: 0.3s;
     margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    position: relative;
     padding-top: 7px;
     padding-bottom: 7px;
 }

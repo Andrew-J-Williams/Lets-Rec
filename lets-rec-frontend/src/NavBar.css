@@ -21,8 +21,8 @@ li:hover {
 }
 
 .icon-set {
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
     transition: width 0.5s, height 0.5s, transform 0.5s;
 }
 
