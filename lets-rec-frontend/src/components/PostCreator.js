@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 
 import { createPost } from '../actions/createPost'
 
+import '../PostCreator.css'
+
 class PostCreator extends React.Component{
 
 
@@ -31,15 +33,18 @@ class PostCreator extends React.Component{
         console.log(parseInt(localStorage.currentUser, 10))
 
         return(
-            <div>
-                <form onSubmit={this.handleOnSubmit}>
+            <div className="post-creator-div">
+                <form className="post-form" onSubmit={this.handleOnSubmit}>
+                    <img src={localStorage.pic} className="user-post-img" alt="user-pic"/>
                     <input
                     name = "content"
+                    className="post-input"
                     value={this.state.content}
                     onChange={this.handleOnChange}
                     ></input>
                     <button
                     type="submit"
+                    className="post-button"
                     >Post</button>
                 </form>
             </div>

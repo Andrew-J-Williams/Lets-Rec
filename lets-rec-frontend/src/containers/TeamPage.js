@@ -5,6 +5,8 @@ import TeamPosts from '../components/TeamPosts'
 
 import { fetchTeam } from '../actions/fetchTeam'
 
+import '../TeamPage.css'
+
 class TeamPage extends React.Component {
     
 
@@ -33,20 +35,22 @@ class TeamPage extends React.Component {
         return(
             <div>
                 <div className="team-info-container">
-                    <h1 id="team-page-name">{teamObject.name}</h1>
-                    <h2>{teamObject.location}</h2>
-                    <h2>{teamObject.users.length} Members</h2>
-                    <h3>Sport: {teamObject.sport}</h3>
-                    <h3>Venue: {teamObject.venue}</h3>
-                    <h3>Time Slot: {teamObject.timeslot}</h3>
-
-                    {teamObject.users.map(user => {
-                        return(
-                            <div key={user.id}>
-                                <h4>{user.username}</h4>
-                            </div>
-                        )
-                    })}
+                    <div className="info-div">
+                        <h1 className="info-name" id="team-page-name">{teamObject.name}</h1>
+                        <h2 className="info-location">{teamObject.location} • {teamObject.sport} League</h2>
+                        <h3>{teamObject.venue}</h3>
+                        <h3>{teamObject.timeslot}</h3>
+                    </div>
+                    <div className="users-div">
+                        <h2>{teamObject.users.length} Members</h2>
+                        {teamObject.users.map(user => {
+                            return(
+                                <div key={user.id}>
+                                    <h4>{user.username}</h4>
+                                </div>
+                            )
+                        })}
+                    </div>
                 </div>
                 <TeamPosts team={this.props.team}/>
             </div>

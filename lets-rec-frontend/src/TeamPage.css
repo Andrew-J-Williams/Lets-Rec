@@ -1,0 +1,30 @@
+.info-div {
+    background-image: url("https://i.imgur.com/qHY9Nok.jpeg");
+    background-size: cover;
+    background-color: white;
+    color: white;
+    box-shadow: 1px 1px 3px lightgray;
+    border-radius: 10px;
+    position: fixed;
+    left: 200px;
+    top: 180px;
+    padding: 30px;
+    width: 300px;
+    height: auto;
+    max-height: 250px;
+}
+
+.users-div {
+    background-color: white;
+    box-shadow: 1px 1px 3px lightgray;
+    border-radius: 10px;
+    position: fixed;
+    left: 200px;
+    top: 500px;
+    padding: 30px;
+    width: 300px;
+}
+
+.info-location {
+    font-weight: 200;
+}
