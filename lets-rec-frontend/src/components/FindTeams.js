@@ -60,23 +60,23 @@ class FindTeams extends React.Component {
 
         return(
             <div className="find-teams-container" id="find-teams-container">
-                <h2 className="find-a-team">Find a Team!</h2>
                 <form className="search-form" onSubmit={this.handleSubmit}>
-                    <label for="locations">Choose a Location: </label>
+                    <h2 className="find-a-team">Find a Team!</h2>
+                    <label for="locations">Choose Location </label>
                     <select name="location" id="location-search" value={this.state.location} onChange={this.handleInputChange}>
                         <option>All Locations</option>
                         {myArray.map(team => 
                             <option value={team.location} key={team.id}>{team.location}</option>    
                         )}
                     </select>
-                    <label>Choose a Sport: </label>
+                    <label>Choose Sport </label>
                     <select name="sport" value={this.state.sport} onChange={this.handleInputChange}>
                         <option>All Sports</option>
                         {myArray.map(team => 
                             <option value={team.sport} key={team.id}>{team.sport}</option>    
                         )}
                     </select>
-                    <button type="submit">Search</button>
+                    <button className="search-button" type="submit">Search</button>
                 </form>
                 <div className="search-results" id="search-results">
                     {searchTeams.map(team => {
@@ -90,6 +90,7 @@ class FindTeams extends React.Component {
                             return(
                                 <div key={team.id} className="team-result" id="team-result">
                                     <h2>{team.name}</h2>
+                                    <h4><i>{team.location}</i></h4>
                                     <h5>{team.venue} • {team.timeslot}</h5>
                                     <h5>{team.sport} League • {team.members} members</h5>
                                     <button id={team.id} className="button-result" onClick={this.handleClick}>Join Team</button>

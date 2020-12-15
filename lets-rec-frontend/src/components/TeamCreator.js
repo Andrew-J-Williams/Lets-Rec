@@ -94,8 +94,8 @@ class TeamCreator extends React.Component {
                     ></input>
                     <br></br><br></br>
                     <button className="creator-button" type="submit">Submit</button>
-                    <button className="creator-button" onClick={this.backToFinder}>Back</button>
                 </form>
+                <button className="creator-button-back" onClick={this.backToFinder}>Back</button>
             </div>
         )
     }

@@ -5,6 +5,15 @@ import '../UserTeams.css'
 
 class UserTeams extends React.Component {
     
+    displayCreator(){
+        const findTeamsContainer = document.getElementById("find-teams-container")
+        const teamCreatorContainer = document.getElementById("team-creator-container")
+        const teamButton = document.getElementById("create-team-button")
+
+        findTeamsContainer.hidden = true
+        teamCreatorContainer.hidden = false
+        teamButton.style.display = "none"
+    }
 
 
     render(){
@@ -17,20 +26,20 @@ class UserTeams extends React.Component {
 
     return(
         <div className="user-teams-container">
-            <h2 className="user-teams-title">Teams</h2>
+            <h2 className="user-teams-title">My Teams</h2>
             {this.props.teams.map(team => {
                 if (userTeamsArray.includes(team.id)){
                     console.log(team)
                     let backSRC = ''
 
                     if(team.sport === "Basketball"){
-                        backSRC = "https://i.imgur.com/4bZ7Q4f.png"
+                        backSRC = "https://www.slideteam.net/wp/wp-content/uploads/2016/05/Graidient-4-690x518.png"
                     }
                     else if (team.sport === "Volleyball"){
-                        backSRC = "https://i.imgur.com/1CaO0Ad.png"
+                        backSRC = "https://i.pinimg.com/originals/f3/a6/78/f3a678ae9a35493a25fcaeb3aeb061c2.png"
                     }
                     else if (team.sport === "Football"){
-                        backSRC = "https://i.imgur.com/k6cGaRb.png"
+                        backSRC = "https://hdwallpaperim.com/wp-content/uploads/2017/08/31/148324-orange-gradient-748x421.jpg"
                     }
                     else if (team.sport === "Baseball"){
                         backSRC = "https://i.imgur.com/YGeHFxs.png"
@@ -57,6 +66,7 @@ class UserTeams extends React.Component {
                     )
                 }
             })}
+            <button className="create-team-button" id="create-team-button" onClick={this.displayCreator}>Create Team</button>
         </div>
     )
     }

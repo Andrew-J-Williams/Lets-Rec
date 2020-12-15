@@ -15,12 +15,42 @@
 
 .find-a-team {
     font-weight: 200;
-    color: white;
-    text-shadow: 1px 1px black;
 }
 
 .search-form {
     margin-bottom: 30px;
+    background-color: white;
+    opacity: 90%;
+    width: 450px;
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.25);
+    top: 30px;
+    margin-bottom: 40px;
+}
+
+.search-button{
+    background-color: firebrick;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    width: 80px;
+    height: 30px;
+    margin-left: 20px;
+    transition: 0.3s;
+    margin: auto;
+}
+
+.search-button:hover {
+    cursor: pointer;
+    color: firebrick;
+    background-color: white;
+    border-width: 1px;
+    border-style: solid;
+    border-color: firebrick;
+    transition: 0.3s;
 }
 
 .search-results {
@@ -28,21 +58,38 @@
 }
 
 .team-result {
-    background-color: firebrick;
-    color: white;
+    background-color: white;
+    color: black;
     width: 300px;
     padding: 10px;
     margin: auto;
+    text-align: center;
     margin-top: 15px;
     margin-bottom: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,.25);
     border-radius: 4px;
+    opacity: 90%;
+    font-weight: 200;
 }
 
 .button-result {
-    font-weight: 200;
+    background-color: firebrick;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    width: 80px;
+    height: 30px;
+    margin-left: 20px;
+    transition: 0.3s;
+    margin: auto;
 }
 
 .button-result:hover {
     cursor: pointer;
+    color: firebrick;
+    background-color: white;
+    border-width: 1px;
+    border-style: solid;
+    border-color: firebrick;
+    transition: 0.3s;
 }

@@ -1,5 +1,5 @@
 .team-creator-container {
-    background-image: url("https://i.imgur.com/q24B9Lg.png");
+    background-image: url("https://i.imgur.com/aRS15Wq.png");
     background-size: cover;
     background-color: white;
     box-shadow: 1px 1px 3px lightgray;
@@ -22,8 +22,9 @@
     border-radius: 4px;
     position: fixed;
     right: 315px;
-    top: 270px;
+    top: 255px;
     width: 300px;
+    height: 310px;
     opacity: 90%;
     text-align: center;
 }
@@ -48,11 +49,36 @@
     border: none;
     width: 80px;
     height: 30px;
-    margin-left: 20px;
     transition: 0.3s;
+    position: fixed;
+    left: 875px;
 }
 
 .creator-button:hover {
+    cursor: pointer;
+    color: firebrick;
+    background-color: white;
+    border-width: 1px;
+    border-style: solid;
+    border-color: firebrick;
+    transition: 0.3s;
+}
+
+.creator-button-back {
+    background-color: firebrick;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    width: 80px;
+    height: 30px;
+    margin-left: 20px;
+    transition: 0.3s;
+    position: fixed;
+    left: 945px;
+    top: 555px;
+}
+
+.creator-button-back:hover {
     cursor: pointer;
     color: firebrick;
     background-color: white;
