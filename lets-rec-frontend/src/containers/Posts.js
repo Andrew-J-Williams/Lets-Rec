@@ -16,11 +16,13 @@ class Posts extends React.Component{
     render(){
 
         let loggedIn = parseInt(localStorage.currentUser, 10) && localStorage.username && localStorage.email && localStorage.teams && localStorage.pic
+        const userTeams = JSON.parse(localStorage.getItem('teams'))
+        const teamIds = userTeams.map(team => team.id)
 
         if (loggedIn){
             return (
                 <div>
-                    <ActivityFeed updates={this.props.posts}/>
+                    <ActivityFeed updates={this.props.posts} teams={teamIds}/>
                 </div>
             )
         } else {
@@ -36,7 +38,7 @@ class Posts extends React.Component{
 
 const mapStateToProps = (state) => {
     return {
-        posts: state.userReducer.posts
+        posts: state.userReducer.posts.sort((a, b) => b.id - a.id)
     }
 }
 

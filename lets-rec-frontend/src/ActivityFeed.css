@@ -14,22 +14,7 @@
     overflow: auto;
 }
 
-.user-post-container {
-    background-color: firebrick;
-    color: #f1f1f1;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 2.5px;
-    padding-bottom: 2.5px;
-    box-shadow: 0 4px 15px rgba(0,0,0,.25);
-    border-radius: 10px;
-    margin-bottom: 20px;
-    margin-top: 30px;
-    height: auto;
-    opacity: 0;
-}
-
-.user-post-container-fade {
+.activity-post-container {
     background-color: firebrick;
     color: #f1f1f1;
     padding-left: 10px;
@@ -42,7 +27,7 @@
     margin-top: 30px;
     height: auto;
     opacity: 100;
-    transition: 2s;
+    transition: 2s ease-in;
 }
 
 .my-activity-feed {

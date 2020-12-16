@@ -1,6 +1,8 @@
 import React from 'react'
 
-const Home = () => {
+class Home extends React.Component{
+
+render(){
     return(
         <div>
             <h1>Let's Rec!</h1>
@@ -8,5 +10,6 @@ const Home = () => {
         </div>
     )
   }
+}
   
   export default Home;

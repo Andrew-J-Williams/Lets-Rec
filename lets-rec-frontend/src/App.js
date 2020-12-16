@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Header from './components/Header'
+import Home from './components/Home'
 import Login from './components/Login'
 import Posts from './containers/Posts'
 import Signup from './components/Signup'
@@ -27,10 +28,11 @@ class App extends React.Component {
       <div className="App">
         <Header/>
         <Switch>
-          <Route exact path="/" component={Posts}/>
+          <Route exact path="/" component={Home}/>
+          <Route exact path="/activity" component={Posts}/>
           <Route path="/login" component={Login}/>
           <Route path="/signup" component={Signup}/>
-          <Route path="/profile" component={UserProfile}/>
+          <Route exact path="/profile" component={UserProfile}/>
           <Route path="/team-creator" component={TeamCreator}/>
           <Route exact path="/teams" component={Teams}/>
           <Route exact path="/teams/:id" component={TeamPage}/>

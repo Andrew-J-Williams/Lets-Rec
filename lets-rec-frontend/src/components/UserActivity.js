@@ -4,16 +4,15 @@ import '../UserActivity.css'
 
 class UserActivity extends React.Component {
 
-    clickLink(){
-        const profileIcon = document.getElementById("profile-icon")
-        profileIcon.click()
+    state = {
+        posts: this.props.activity.filter(post => post.user_id === parseInt(localStorage.currentUser, 10))
     }
 
     render(){
         return(
-            <div onLoad={this.clickLink} className="activity-container" id="activity-container">
+            <div className="activity-container" id="activity-container">
                 <h3 className="my-activity-feed">My Posts</h3>
-                {this.props.activity.map(post =>
+                {this.state.posts.map(post =>
                     <div key={post.id} className="user-post-container">
                         <img src={post.user.picture} className="post-picture" alt="profile-icon"/>
                         <h5 className="post-username">{post.user.username}</h5>

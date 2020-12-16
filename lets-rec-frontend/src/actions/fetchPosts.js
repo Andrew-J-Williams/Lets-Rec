@@ -7,6 +7,7 @@ export function fetchPosts(){
             dispatch({
             type: 'FETCH_POSTS',
             payload: data
-        }))
+        })
+        )
     }
 }
