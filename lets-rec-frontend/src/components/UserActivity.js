@@ -4,10 +4,14 @@ import '../UserActivity.css'
 
 class UserActivity extends React.Component {
 
+    clickLink(){
+        const profileIcon = document.getElementById("profile-icon")
+        profileIcon.click()
+    }
 
     render(){
         return(
-            <div className="activity-container">
+            <div onLoad={this.clickLink} className="activity-container" id="activity-container">
                 <h3 className="my-activity-feed">My Posts</h3>
                 {this.props.activity.map(post =>
                     <div key={post.id} className="user-post-container">

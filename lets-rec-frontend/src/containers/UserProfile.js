@@ -25,7 +25,7 @@ class UserProfile extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        posts: state.userReducer.posts
+        posts: state.userReducer.posts.sort((a, b) => b.id - a.id)
     }
 }
 

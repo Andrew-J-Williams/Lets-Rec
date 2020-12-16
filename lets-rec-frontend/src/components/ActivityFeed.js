@@ -4,10 +4,14 @@ import "../ActivityFeed.css"
 
 class ActivityFeed extends React.Component{
 
+    clickLink() {
+        const homeIcon = document.getElementById("home-icon")
+        homeIcon.click()
+    }
 
     render(){
 
-        const postsArray = this.props.updates
+        const postsArray = this.props.updates.sort((a, b) => b.id - a.id)
         const userTeams = JSON.parse(localStorage.getItem('teams'))
         const teamIds = userTeams.map(team => team.id)
         console.log(teamIds.includes(1))
@@ -15,7 +19,7 @@ class ActivityFeed extends React.Component{
         return(
             <div>
             <h1 className="feed-title">Activity Feed</h1>
-            <div className="updates-container">
+            <div onLoad={this.clickLink} className="updates-container">
                 {postsArray.map(post => {
                     if (teamIds.includes(post.team_id)){
                         console.log(post.team_id)
