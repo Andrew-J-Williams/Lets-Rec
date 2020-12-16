@@ -4,15 +4,14 @@ import '../UserActivity.css'
 
 class UserActivity extends React.Component {
 
-    state = {
-        posts: this.props.activity.filter(post => post.user_id === parseInt(localStorage.currentUser, 10))
-    }
-
     render(){
+
+        const userPosts = this.props.activity.filter(post => post.user_id === parseInt(localStorage.currentUser, 10))
+
         return(
             <div className="activity-container" id="activity-container">
                 <h3 className="my-activity-feed">My Posts</h3>
-                {this.state.posts.map(post =>
+                {userPosts.map(post =>
                     <div key={post.id} className="user-post-container">
                         <img src={post.user.picture} className="post-picture" alt="profile-icon"/>
                         <h5 className="post-username">{post.user.username}</h5>

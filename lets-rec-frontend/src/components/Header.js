@@ -8,7 +8,6 @@ const Header = () => {
     let loggedIn = localStorage.currentUser
     let username = localStorage.username
     let pic = localStorage.pic
-    console.log(pic)
 
     return(
         <div className="header">
