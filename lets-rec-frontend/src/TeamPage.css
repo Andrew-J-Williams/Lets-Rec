@@ -23,6 +23,7 @@
     top: 500px;
     padding: 30px;
     width: 300px;
+    overflow: scroll;
 }
 
 .info-location {
@@ -43,4 +44,15 @@
     height: auto;
     opacity: 100;
     transition: 2s ease-in;
+}
+
+.team-user-pic {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    float: left;
+}
+
+.team-user-name {
+    font-weight: 100;
 }

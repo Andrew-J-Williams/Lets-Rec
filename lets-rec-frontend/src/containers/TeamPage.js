@@ -46,7 +46,8 @@ class TeamPage extends React.Component {
                         {teamObject.users.map(user => {
                             return(
                                 <div key={user.id}>
-                                    <h4>{user.username}</h4>
+                                    <img src={user.picture} className="team-user-pic" alt="user-pic"/>
+                                    <h4 className="team-user-name">{user.username}</h4>
                                 </div>
                             )
                         })}
