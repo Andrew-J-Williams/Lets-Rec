@@ -15,6 +15,10 @@ export default function userReducer (state=initialState, action) {
             return {
                 user: action.payload
             }
+        case 'FETCH_USER':
+            return {
+                user: action.payload
+            }
         case 'FETCH_POSTS':
             return {
                 posts: action.payload

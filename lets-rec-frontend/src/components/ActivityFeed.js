@@ -10,8 +10,8 @@ class ActivityFeed extends React.Component{
 
         return(
             <div className="activity-div">
-            <h1 className="feed-title">Activity Feed</h1>
             <div className="updates-container">
+            <h4 className="feed-title">Activity Feed</h4>
                 {userActivity.map(post => {
                     return( 
                     <div key={post.id} className="activity-post-container">

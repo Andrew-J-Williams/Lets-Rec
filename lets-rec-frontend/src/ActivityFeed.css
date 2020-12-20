@@ -1,6 +1,15 @@
 .feed-title {
-    position: relative;
-    left: 285px
+    position: fixed;
+    left: 300px;
+    top: 159px;
+    background-color: white;
+    color: black;
+    width: 840px;
+    font-weight: 200;
+    margin-bottom: 20px;
+    padding-bottom: 9px;
+    padding-top: 30px;
+    opacity: 80%;
 }
 
 .updates-container {
@@ -12,6 +21,8 @@
     box-shadow: 1px 1px 3px lightgray;
     border-radius: 10px;
     overflow: auto;
+    position: relative;
+    top: 70px;
 }
 
 .activity-post-container {
