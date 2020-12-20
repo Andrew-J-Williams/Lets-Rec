@@ -1,8 +1,49 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
+import { fetchUserProfile } from '../actions/fetchUserProfile'
 
 class Teammate extends React.Component {
 
-    getTeams = (state, info, variable) => {
+    componentDidMount(){
+        let id = this.props.match.params.id
+        this.props.fetchUserProfile(id) 
+    }
+
+   
+    render(){
+        console.log(this.props.member)
+        //const teammateInfo = this.props.location.info
+        //const teammateTeams = this.props.location.teams
+        
+        return(
+            <div className="profile-container">
+                
+            </div>
+        )
+    }
+}
+
+const mapStateToProps = (state) => {
+    return {
+        member: state.membersReducer.member
+    }
+}
+
+export default connect(mapStateToProps, {fetchUserProfile})(Teammate)
+
+
+
+/*
+    state = {
+        id: this.props.location.info.id,
+        username: this.props.location.info.username,
+        email: this.props.location.info.email,
+        teams: this.props.location.teams,
+        picture: this.props.location.info.picture
+    }
+
+    getTeams = (state, info) => {
         let membersArray = []
         let userTeams = []
 
@@ -23,7 +64,7 @@ class Teammate extends React.Component {
         return userTeams.length
     }
 
-    getTeamMembers = (teams, info) => {
+   getTeamMembers = (teams, info) => {
         let teamIdArray = []
         let membersSum = []
         let i
@@ -44,17 +85,10 @@ class Teammate extends React.Component {
         let sumArray = membersSum.reduce((a, b) => a + b, 0)
 
         return sumArray - membersSum.length
-    }
+    } */
 
-    render(){
-        const teammateInfo = this.props.location.info
-        const teammateTeams = this.props.location.teams
-        console.log(teammateInfo)
-        console.log(teammateTeams)
-        
-        return(
-            <div className="profile-container">
-                <div className="info-box">
+    /*
+    <div className="info-box">
                     <h1 className="profile-username">{teammateInfo.username}</h1>
                     <h4 className="profile-teams"><b>{this.getTeams(teammateTeams, teammateInfo)}</b> teams</h4>
                     <h4 className="profile-teammates"><b>{this.getTeamMembers(teammateTeams, teammateInfo)}</b> teammates</h4>
@@ -64,12 +98,9 @@ class Teammate extends React.Component {
                 <div className="profile-pic-container">
                     <img src={teammateInfo.picture} alt="Profile Pic" className="profile-pic"/>
                 </div>
-            </div>
-        )
-    }
 
 
-}
 
 
-export default Teammate
+
+*/

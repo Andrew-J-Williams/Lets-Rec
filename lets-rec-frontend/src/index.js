@@ -6,6 +6,7 @@ import { Provider } from 'react-redux'
 
 import loginReducer from './reducers/loginReducer'
 import postReducer from './reducers/postReducer'
+import membersReducer from './reducers/membersReducer'
 import signupReducer from './reducers/signupReducer'
 import userReducer from './reducers/userReducer'
 import teamsReducer from './reducers/teamsReducer'
@@ -17,6 +18,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 let reducer = combineReducers({
   loginReducer,
   postReducer,
+  membersReducer,
   signupReducer,
   userReducer,
   teamsReducer
