@@ -13,7 +13,6 @@ class UserProfile extends React.Component {
     }
 
     render(){
-        this.onLoad()
         return (
             <div>
                 <UserActivity activity={this.props.posts}/>
