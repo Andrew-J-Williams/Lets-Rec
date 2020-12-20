@@ -27,22 +27,11 @@ class TeamPosts extends React.Component{
         const teamInfo = this.props.team
 
         return(
-            <div className="team-posts-container">
-                <h4 className="post-title">Team Activity</h4>
-                
+            <div className="team-posts-container">    
                 <div id="team-activity-container" className="team-activity-container">
                     {postList.map(post => {
 
                     if(post.team_id === teamId){
-                       /* return(
-                            <div key={post.id} className="user-post-container">
-                                <img src={post.user.picture} className="post-picture" alt="profile-icon"/>
-                                <h5 className="post-username">{post.user.username}</h5>
-                                <p className="post-content"><b>@{post.team.name.split(" ").join("")}</b> {post.content}</p>
-                                <p className="post-time">{post.created_at}</p>
-                                <img src="https://i.imgur.com/dbzNiXR.png" className="delete-icon" alt="delete-icon" onClick={() => deletePost(post.id)}/>
-                            </div>
-                        )*/
                         return(
                                 <Post key={post.id} currentPost={post} deletePost={this.props.deletePost}/>
                         )
@@ -50,6 +39,7 @@ class TeamPosts extends React.Component{
 
                 })}
                 </div>
+                <h4 className="post-title">Team Activity</h4>
                 <PostCreator currentTeam={teamInfo}/>
             </div>
         )

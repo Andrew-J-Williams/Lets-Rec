@@ -82,14 +82,26 @@
     top: -30px;
 }
 
-.delete-icon {
-    width: 15px;
-    height: 15px;
+.delete-button-post {
+    color: firebrick;
+    background-color: white;
+    border-width: 1px;
+    border-style: solid;
+    border-color: firebrick;
+    border-radius: 4px;
     position: relative;
-    left: 800px;
-    bottom: 100px;
+    left: 520px;
+    bottom: 10px;
+    font-weight: 200;
+    width: 60px;
+    height: 25px;
+    transition-duration: 0.3s;
 }
 
-.delete-icon:hover {
+.delete-button-post:hover {
     cursor: pointer;
+    background-color: firebrick;
+    font-weight: 100;
+    color: white;
+    transition-duration: 0.3s;
 }

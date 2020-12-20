@@ -1,5 +1,5 @@
-.info-div {
-    background-image: url("https://i.imgur.com/qHY9Nok.jpeg");
+#info-div {
+    background-image: url("");
     background-size: cover;
     background-color: white;
     color: white;
@@ -10,8 +10,9 @@
     top: 180px;
     padding: 30px;
     width: 300px;
-    height: auto;
+    height: 250px;
     max-height: 250px;
+    overflow: scroll;
 }
 
 .users-div {
@@ -23,6 +24,7 @@
     top: 500px;
     padding: 30px;
     width: 300px;
+    height: 190px;
     overflow: scroll;
 }
 
@@ -46,6 +48,10 @@
     transition: 2s ease-in;
 }
 
+.team-user-div {
+    margin-top: 30px;
+}
+
 .team-user-pic {
     height: 30px;
     width: 30px;
@@ -55,4 +61,40 @@
 
 .team-user-name {
     font-weight: 100;
+    position: relative;
+    left: 7px;
+    top: 7px;
+}
+
+.post-title {
+    position: fixed;
+    top: 159px;
+    background-color: white;
+    color: black;
+    width: 600px;
+    opacity: 80%;
+    margin-bottom: 100px;
+    padding-bottom: 50px;
+    padding-top: 30px;
+}
+
+.user-post-img {
+    position: relative;
+    top: 3px;
+}
+
+.team-activity-container {
+    margin-top: 70px;
+}
+
+.users-div-header {
+    font-weight: 200;
+    position: fixed;
+    background-color: white;
+    color: black;
+    padding-top: 30px;
+    opacity: 80%;
+    padding-top: 30px;
+    width: 330px;
+    top: 480px;
 }
