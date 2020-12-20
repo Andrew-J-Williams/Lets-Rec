@@ -1,0 +1,80 @@
+.member-profile-container {
+    background-color: white;
+    background: url("https://i.imgur.com/Nh04E18.png");
+    background-size: cover;
+    padding: 30px;
+    width: 500px;
+    height: 500px; 
+    margin: auto;
+    box-shadow: 1px 1px 3px lightgray;
+    border-radius: 10px;
+    overflow: auto;
+    position: fixed;
+    left: 750px;
+    top: 180px;
+}
+
+.member-profile-pic-container {
+    margin: auto;
+    position: relative;
+    top:-240px;
+    left: -20px;
+}
+
+.member-info-box {
+    padding: 30px;
+    margin: auto;
+    overflow: auto;
+    position: relative;
+    top: 100px;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,.25);
+    border-radius: 10px;
+}
+
+.member-profile-pic {
+    border-radius: 50%;
+    height: 220px;
+    width: 220px;
+    border-style: solid;
+    border-color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,.25);
+}
+
+.member-profile-username {
+    color: firebrick;
+    font-weight: 200;
+    position: relative;
+    left: 180px;
+}
+
+.member-profile-teams {
+    color: firebrick;
+    font-weight: 200;
+    position: relative;
+    left: 180px;
+}
+
+.member-profile-teammates {
+    color: firebrick;
+    font-weight: 200;
+    position: relative;
+    left: 260px;
+    top: -39px;
+}
+
+.member-profile-email {
+    color: firebrick;
+    font-weight: 200;
+    position: relative;
+    left: 200px;
+    top: -50px;
+}
+
+.member-email-icon {
+    max-height: 20px;
+    position: relative;
+    left: 176px;
+    top: -90px;
+}
+
