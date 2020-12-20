@@ -13,7 +13,7 @@ class UserProfile extends React.Component {
     }
 
     render(){
-
+        this.onLoad()
         return (
             <div>
                 <UserActivity activity={this.props.posts}/>
@@ -24,6 +24,7 @@ class UserProfile extends React.Component {
 }
 
 const mapStateToProps = (state) => {
+    
     return {
         posts: state.userReducer.posts.sort((a, b) => b.id - a.id)
     }

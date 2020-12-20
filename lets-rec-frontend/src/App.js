@@ -31,11 +31,11 @@ class App extends React.Component {
           <Route exact path="/" component={Posts}/>
           <Route path="/login" component={Login}/>
           <Route path="/signup" component={Signup}/>
-          <Route exact path="/profile" component={UserProfile}/>
+          <Route path="/profile" component={UserProfile}/>
           <Route path="/team-creator" component={TeamCreator}/>
           <Route exact path="/teams" component={Teams}/>
           <Route exact path="/teams/:id" component={TeamPage}/>
-          <Route exact path="/users/:id" component={Teammate}/>
+          <Route path="/users/:id" component={Teammate}/>
         </Switch>
       </div>
       </Router>

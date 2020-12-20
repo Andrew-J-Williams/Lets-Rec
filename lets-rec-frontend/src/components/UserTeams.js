@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Teammate from '../components/Teammate'
+
 import '../UserTeams.css'
 
 class UserTeams extends React.Component {
@@ -57,8 +59,23 @@ class UserTeams extends React.Component {
                         </div>
                         <div key={team.id} className="members-circle">
                             <ul className="members-list">
-                                {team.users.map(user => 
-                                    <li key={user.id} className="member-li"><img src={user.picture} alt="member-bubble" className="member-circle"/></li>    
+                                {team.users.map(user => {
+                                    let userInfo = {
+                                        pathname: `/users/${user.id}`,
+                                        info: user,
+                                        teams: this.props.teams
+                                    }
+
+                                    if (user.id === parseInt(localStorage.currentUser, 10)){
+                                        return(
+                                            <Link to={`/profile`} query={user}><li key={user.id} className="member-li"><img src={user.picture} alt="member-bubble" className="member-circle"/></li></Link>
+                                        )
+                                    } else {
+                                        return(
+                                            <Link to={userInfo}><li key={user.id} className="member-li"><img src={user.picture} alt="member-bubble" className="member-circle"/></li></Link>
+                                        )    
+                                    } 
+                                }    
                                 )}
                             </ul>
                         </div>
