@@ -1,6 +1,10 @@
 export function createPost(userContent){
     
-    console.log(userContent.team_id)
+    let userPost = {
+        content: userContent.content,
+        user_id: userContent.user_id,
+        team_id: userContent.team_id
+    }
 
 
     return (dispatch) => {
@@ -10,13 +14,10 @@ export function createPost(userContent){
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
-            body: JSON.stringify(userContent)
+            body: JSON.stringify(userPost)
         })
         .then(resp => resp.json())
         .then(post => {
-            console.log(post)
-            dispatch(makePost(post))
-
             const teamPostsContainer = document.getElementById("team-activity-container")
             const div = document.createElement("div")
             const img = document.createElement("img")
@@ -39,6 +40,8 @@ export function createPost(userContent){
             div.append(p1)
 
             teamPostsContainer.prepend(div)
+
+            dispatch(makePost(post))
         })
     }
 }

@@ -11,12 +11,12 @@ class PostCreator extends React.Component{
     state = {
         content: '',
         user_id: parseInt(localStorage.currentUser, 10),
-        team_id: this.props.currentTeam.id
+        team_id: 0
     }
 
     handleOnChange = (event) => {
         this.setState({
-            [event.target.name]: event.target.value
+            content: event.target.value
         })
         console.log(event.target.value)
     }
@@ -24,13 +24,20 @@ class PostCreator extends React.Component{
     handleOnSubmit = (event) => {
         event.preventDefault()
 
+        this.state.team_id = this.props.currentTeam.id
+        console.log(this.state.team_id)
+
         this.props.createPost(this.state)
+        console.log(this.state)
     }
 
     render(){
         console.log("@"+this.props.currentTeam.name.split(" ").join(""))
         console.log(this.props.currentTeam.id)
         console.log(parseInt(localStorage.currentUser, 10))
+
+        console.log(this.state.user_id)
+        console.log(this.state.team_id)
 
         return(
             <div className="post-creator-div">
