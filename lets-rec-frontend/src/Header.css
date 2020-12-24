@@ -13,6 +13,12 @@
     position: relative;
     left: 20px;
     top: 2px;
+    transition: 0.5s;
+}
+
+.logo:hover {
+    transition: 0.5s;
+    transform: rotate(-20deg);
 }
 
 .log-in {
