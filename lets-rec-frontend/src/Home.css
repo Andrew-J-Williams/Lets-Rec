@@ -20,16 +20,68 @@
     background-color: white;
     opacity: 90%;
     width: 450px;
-    height: auto;
+    height: 355px;
     position: relative;
     margin: auto;
     padding-top: 5px;
     padding: 20px;
     border-radius: 4px;
     box-shadow: 0 4px 15px rgba(0,0,0,.25);
+    top: 50px;
 }
 
 .home-title {
     text-align: center;
+    font-weight: 600;
+}
+
+.home-sub-title {
+    text-align: center;
+    font-weight: 100;
+}
+
+.home-logo {
+    position: relative;
+    max-height: 40px;
+    margin: auto;
+    left: 200px;
+    transition: 0.5s;
+}
+
+.home-logo:hover {
+    transform: rotate(360deg);
+    transition: 0.5s;
+}
+
+.home-summ {
+    text-align: center;
+    font-weight: 100;
+}
+
+.home-button {
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    width: 100px;
+    opacity: 70%;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    border-radius: 4px;
+    background-color: white;
+    border-color: firebrick;
+    border-style: solid;
+    border-width: 2px;
+    color: firebrick;
     font-weight: 200;
+    transition-duration: 0.3s;
+    float: left;
+    margin-left: 20px;
+    left: 65px;
+}
+
+.home-button:hover {
+    background-color: firebrick;
+    color: white;
+    transition-duration: 0.3s;
 }
