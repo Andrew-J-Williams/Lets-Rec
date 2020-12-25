@@ -72,6 +72,7 @@ class TeamPage extends React.Component {
                         <h2 className="info-location">{teamObject.location} • {teamObject.sport} League</h2>
                         <h3>{teamObject.venue}</h3>
                         <h3>{teamObject.timeslot}</h3>
+                        <button className="team-leave-button">Leave Team</button>
                     </div>
                     <div className="users-div">
                         <h4 className="users-div-header">{teamObject.users.length} Members</h4>

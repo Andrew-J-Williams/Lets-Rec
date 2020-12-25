@@ -10,7 +10,7 @@ class UserActivity extends React.Component {
 
         return(
             <div className="activity-container" id="activity-container">
-                <h3 className="my-activity-feed">My Posts</h3>
+                <h4 className="my-activity-feed">My Posts</h4>
                 {userPosts.map(post =>
                     <div key={post.id} className="user-post-container">
                         <img src={post.user.picture} className="post-picture" alt="profile-icon"/>

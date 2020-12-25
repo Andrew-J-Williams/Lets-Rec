@@ -98,3 +98,27 @@
     width: 330px;
     top: 480px;
 }
+
+.team-leave-button {
+    color: black;
+    background-color: white;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 4px;
+    width: 100px;
+    height: 30px;
+    margin-left: 20px;
+    transition: 0.3s;
+    margin: auto;
+    text-decoration: none;
+    opacity: 80%;
+    font-weight: 200;
+}
+
+.team-leave-button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+}

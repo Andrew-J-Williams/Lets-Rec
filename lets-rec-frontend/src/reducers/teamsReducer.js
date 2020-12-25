@@ -14,6 +14,7 @@ const initialState = {
         user_id: 0,
         team_id: 0
     },
+    userTeams: [],
     isLoading: false
 }
 
@@ -42,6 +43,15 @@ export default function teamsReducer (state=initialState, action) {
             return {
                 team: action.payload,
                 isLoading: false
+            }
+        case 'FETCH_USER_TEAMS':
+            return {
+                userTeams: action.payload
+            }
+        case 'REMOVE_USER_TEAMS':
+            const uT = state.userTeams.filter(team => team.id !== action.id)
+            return {
+                uT
             }
         default:
             return state 
