@@ -63,9 +63,7 @@ class TeamPage extends React.Component {
         const teamObject = this.props.team
 
         this.changePic(teamObject.location)
-        console.log(this.props.userTeams)
-        console.log("look above")
-
+        
         return(
             <div>
                 <div className="team-info-container">

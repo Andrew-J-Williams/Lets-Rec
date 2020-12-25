@@ -16,14 +16,15 @@ export function getUserTeams(){
 export function deleteUserTeams(userTeamObj){
 
     console.log(userTeamObj.id)
+    let userTeamId = userTeamObj.id
     
     return (dispatch) => {
-        return fetch(`http://localhost:3000/api/v1/user_teams/${userTeamObj.id}`, {
+        return fetch(`http://localhost:3000/api/v1/user_teams/${userTeamId}`, {
              method: "DELETE",
          })
          .then(data => {
 
-            let userTeamsArray = JSON.parse(localStorage.getItem('teams'))
+            console.log(data)
             
              dispatch(leaveTeam(data))
              window.location.replace('http://localhost:3001/teams')
