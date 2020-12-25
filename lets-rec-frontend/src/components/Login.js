@@ -52,10 +52,6 @@ class Login extends React.Component {
                         className="log-in-button"
                     >Let's Rec!</button>
                 </form>
-
-                <a href="/signup">
-                    <h5>New User</h5>    
-                </a>
             </div>
         )
 

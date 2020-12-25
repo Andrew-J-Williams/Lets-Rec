@@ -22,12 +22,21 @@ render(){
                         loggedIn ? 
 
                         <div>
-                            <h5 className="home-button">View Profile</h5>
-                            <h5 className="home-button">Find a Team</h5>
+                            <a href="profile">
+                                <h5 className="home-button">View Profile</h5>
+                            </a>
+                            <a href="teams">
+                                <h5 className="home-button">Find a Team</h5>
+                            </a>
                         </div>
                         :
                         <div>
-                            <h5 className="home-button"><b>Log In</b></h5> 
+                            <a href="/login">
+                                <h5 className="home-button"><b>Log In</b></h5>
+                            </a>
+                            <a href="signup">
+                                <h5 className="home-button"><b>Create Account</b></h5>
+                            </a>  
                         </div>
                     }
                 </div>
