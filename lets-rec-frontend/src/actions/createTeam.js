@@ -46,32 +46,6 @@ export function createUserTeams(userId, teamId){
     }
 }
 
-export function getUserTeams(){
-
-    return (dispatch) => {
-        fetch('http://localhost:3000/api/v1/user_teams/')
-        .then(response => response.json())
-        .then(data => 
-            dispatch({
-            type: 'FETCH_USER_TEAMS',
-            payload: data
-        })
-        )
-    }
-
-}
-
-export function deleteUserTeams(userId, teamId){
-    
-    const data = {
-        user_id: userId,
-        team_id: teamId
-    }
-
-
-
-}
-
 const makeTeam = input => ({
     type: 'CREATE_TEAM',
     payload: input
