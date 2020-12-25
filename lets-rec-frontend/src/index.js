@@ -9,6 +9,7 @@ import postReducer from './reducers/postReducer'
 import membersReducer from './reducers/membersReducer'
 import signupReducer from './reducers/signupReducer'
 import userReducer from './reducers/userReducer'
+import userTeamsReducer from './reducers/userTeamsReducer'
 import teamsReducer from './reducers/teamsReducer'
 
 import App from './App';
@@ -21,6 +22,7 @@ let reducer = combineReducers({
   membersReducer,
   signupReducer,
   userReducer,
+  userTeamsReducer,
   teamsReducer
 })
 

@@ -10,22 +10,20 @@ class PostCreator extends React.Component{
 
     state = {
         content: '',
-        user_id: parseInt(localStorage.currentUser, 10),
+        user_id: 0,
         team_id: 0
     }
 
     handleOnChange = (event) => {
         this.setState({
-            content: event.target.value
+            content: event.target.value,
+            user_id: parseInt(localStorage.currentUser, 10),
+            team_id: this.props.currentTeam.id
         })
-        console.log(event.target.value)
     }
 
     handleOnSubmit = (event) => {
         event.preventDefault()
-
-        this.state.team_id = this.props.currentTeam.id
-        console.log(this.state.team_id)
 
         this.props.createPost(this.state)
         console.log(this.state)

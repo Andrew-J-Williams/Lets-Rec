@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import TeamPosts from '../components/TeamPosts'
+import LeaveTeam from '../components/LeaveTeam'
 
 import { fetchTeam } from '../actions/fetchTeam'
 
@@ -62,7 +63,8 @@ class TeamPage extends React.Component {
         const teamObject = this.props.team
 
         this.changePic(teamObject.location)
-        
+        console.log(this.props.userTeams)
+        console.log("look above")
 
         return(
             <div>
