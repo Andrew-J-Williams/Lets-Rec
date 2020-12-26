@@ -1,6 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-import "../ActivityFeed.css"
+import Post from '../components/Post'
+
+import { deletePost } from '../actions/deletePost'
+
+import '../ActivityFeed.css'
+import '../UserActivity.css'
 
 class ActivityFeed extends React.Component{
 
@@ -14,12 +20,7 @@ class ActivityFeed extends React.Component{
                 <h4 className="feed-title">Activity Feed</h4>
                     {userActivity.map(post => {
                         return( 
-                        <div key={post.id} className="activity-post-container">
-                            <img src={post.user.picture} className="post-picture" alt="profile-icon"/>
-                            <h5 className="post-username">{post.user.username}</h5>
-                            <p className="post-content"><b>@{post.team.name.split(" ").join("")}</b> {post.content}</p>
-                            <p className="post-time">{post.created_at}</p>
-                        </div>
+                            <Post key={post.id} currentPost={post} deletePost={this.props.deletePost}/>
                         )
                     }
                 )}
@@ -31,4 +32,4 @@ class ActivityFeed extends React.Component{
 
 }
 
-export default ActivityFeed
+export default connect(null, {deletePost})(ActivityFeed)

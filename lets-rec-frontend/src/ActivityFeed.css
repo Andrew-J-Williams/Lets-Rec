@@ -1,10 +1,10 @@
 .feed-title {
     position: fixed;
-    left: 300px;
+    left: 400px;
     top: 159px;
     background-color: white;
     color: black;
-    width: 840px;
+    width: 640px;
     font-weight: 200;
     margin-bottom: 20px;
     padding-bottom: 9px;
@@ -15,7 +15,7 @@
 .updates-container {
     background-color: white;
     padding: 30px;
-    width: 800px;
+    width: 600px;
     height: 500px; 
     margin: auto;
     box-shadow: 1px 1px 3px lightgray;
@@ -45,13 +45,13 @@
     font-weight: 200;
     position: fixed;
     top: 159px;
-    left: 170px;
+    left: 100px;
     background-color: white;
     color: black;
     margin-bottom: 20px;
     padding-bottom: 9px;
     padding-top: 30px;
-    width: 530px;
+    width: 640px;
     opacity: 80%;
 }
 
