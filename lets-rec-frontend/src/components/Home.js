@@ -5,8 +5,6 @@ import '../Home.css'
 class Home extends React.Component{
 
 render(){
-    let loggedIn = parseInt(localStorage.currentUser, 10) && localStorage.username && localStorage.email && localStorage.teams && localStorage.pic
-
     return(
         <div>
             <div className="home-container">
@@ -19,7 +17,7 @@ render(){
                     <h5 className="home-summ">We are a nationwide community focused on connecting athletes and sports lovers. Join a team, or create your own, and stay up to date with your teammates. Our #1 goal is having fun, so get out there and rec!</h5>
                     <br></br>
                     {
-                        loggedIn ? 
+                        this.props.checkLogIn ? 
 
                         <div>
                             <a href="profile">

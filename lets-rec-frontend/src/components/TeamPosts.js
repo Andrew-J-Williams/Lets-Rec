@@ -18,10 +18,6 @@ class TeamPosts extends React.Component{
  
     render(){
 
-        console.log(this.props.posts)
-        console.log(this.props.team)
-        console.log(this.props.team.id)
-
         const postList = this.props.posts
         const teamId = this.props.team.id
         const teamInfo = this.props.team

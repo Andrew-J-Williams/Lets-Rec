@@ -19,18 +19,20 @@ import {
   Switch
 } from 'react-router-dom';
 
-
 class App extends React.Component {
 
   render(){
+
+    let loggedIn = parseInt(localStorage.currentUser, 10) && localStorage.username && localStorage.email && localStorage.teams && localStorage.pic    
     
+    if (loggedIn){
     return (
       <Router>
       <div className="App">
         <Header/>
         <Switch>
           <Route exact path="/" component={Posts}/>
-          <Route exact path="/home" component={Home}/>
+          <Route exact path="/home" render={() => <Home checkLogIn={loggedIn}/>}/>
           <Route path="/login" component={Login}/>
           <Route path="/signup" component={Signup}/>
           <Route path="/profile" component={UserProfile}/>
@@ -42,6 +44,20 @@ class App extends React.Component {
       </div>
       </Router>
     );
+    } else {
+      return (
+        <Router>
+        <div className="App">
+          <Header/>
+          <Switch>
+            <Route exact path="/home" component={Home}/>
+            <Route path="/login" component={Login}/>
+            <Route path="/signup" component={Signup}/>
+          </Switch>
+        </div>
+        </Router>
+      );
+    }
   }
 }
 
