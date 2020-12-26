@@ -40,7 +40,6 @@ class FindTeams extends React.Component {
         const myArray = this.props.teams
         console.log(this.state)
         let searchTeams = ''
-        let resultsDiv = document.getElementById("search-results")
 
         if (this.state.location === "All Locations" && this.state.sport === "All Sports"){
             searchTeams = myArray
