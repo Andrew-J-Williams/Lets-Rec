@@ -23,10 +23,12 @@ export function createPost(userContent){
             const img = document.createElement("img")
             const h5 = document.createElement("h5")
             const p1 = document.createElement("p")
+            const button = document.createElement("button")
             const teamName = "@" + document.getElementById("team-page-name").innerText.split(" ").join("")
 
             div.key = post.id
             div.classList.add("user-post-container")
+            div.id = post.id
             img.src = localStorage.pic
             img.classList.add("post-picture")
             img.alt = "profile-icon"
@@ -34,10 +36,18 @@ export function createPost(userContent){
             h5.innerText = localStorage.username
             p1.classList.add("post-content")
             p1.innerHTML = `<b>${teamName}</b> ${post.content}`
+            button.innerText = "Delete"
+            button.classList.add("delete-button-post")
+
+            button.addEventListener('click', e => {
+                e.preventDefault()    
+                removePost(post, e)
+            })
 
             div.append(img)
             div.append(h5)
             div.append(p1)
+            div.append(button)
 
             teamPostsContainer.prepend(div)
 
@@ -50,3 +60,16 @@ const makePost = input => ({
     type: 'CREATE_POST',
     payload: input
 })
+
+function removePost(post, event){
+    fetch(`http://localhost:3000/api/v1/posts/${post.id}`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+    })
+    .then(data => {
+        event.target.parentElement.remove()
+    })
+}
