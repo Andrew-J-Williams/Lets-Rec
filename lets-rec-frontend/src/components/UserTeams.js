@@ -26,7 +26,7 @@ class UserTeams extends React.Component {
 
     return(
         <div className="user-teams-container">
-            <h2 className="user-teams-title">My Teams</h2>
+            <h4 className="user-teams-title">My Teams</h4>
             {this.props.teams.map(team => {
                 if (userTeamsArray.includes(team.id)){
                     console.log(team)

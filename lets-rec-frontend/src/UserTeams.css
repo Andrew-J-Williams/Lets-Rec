@@ -17,10 +17,14 @@
     color: black;
     background-color: white;
     position: fixed;
-    left: 180px;
-    top: 160px;
+    margin-bottom: 20px;
+    padding-bottom: 9px;
+    padding-top: 30px;
+    left: 172px;
+    top: 175px;
     width: 350px;
     padding-top: 10px;
+    opacity: 80%;
 }
 
 .team-circle {
