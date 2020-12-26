@@ -10,7 +10,7 @@ import '../Teammate.css'
 class Teammate extends React.Component {
 
     componentDidMount(){
-        let id = this.props.id
+        let id = this.props.match.params.id
         this.props.fetchUserProfile(id) 
     }
 
@@ -23,8 +23,7 @@ class Teammate extends React.Component {
     render(){
         let memberInfo = this.props.member
         
-        if(this.props.checkLogIn){
-            return(
+        return(
             <div classname="member-container">
                 <div className="member-profile-container">
                     <div className="member-info-box">
@@ -41,9 +40,6 @@ class Teammate extends React.Component {
                 <TeammatePosts member={memberInfo}/>
             </div>
             )
-        } else {
-            window.location.replace('http://localhost:3001/home')
-        } 
     }
 }
 
