@@ -26,6 +26,9 @@ class Login extends React.Component {
 
     render(){
 
+    if(this.props.checkLogIn){
+        window.location.replace('http://localhost:3001/profile')
+    } else {
         return(
             <div className="log-in-div">
                 <h3 className="log-in-title">Log In</h3>
@@ -54,7 +57,7 @@ class Login extends React.Component {
                 </form>
             </div>
         )
-
+        }
     }
 
 

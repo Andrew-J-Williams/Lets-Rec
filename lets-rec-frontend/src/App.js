@@ -33,8 +33,8 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={Posts}/>
           <Route exact path="/home" render={() => <Home checkLogIn={loggedIn}/>}/>
-          <Route path="/login" component={Login}/>
-          <Route path="/signup" component={Signup}/>
+          <Route path="/login" render={() => <Login checkLogIn={loggedIn}/>}/>
+          <Route path="/signup" render={() => <Signup checkLogIn={loggedIn}/>}/>
           <Route path="/profile" component={UserProfile}/>
           <Route path="/team-creator" component={TeamCreator}/>
           <Route exact path="/teams" component={Teams}/>
@@ -50,9 +50,9 @@ class App extends React.Component {
         <div className="App">
           <Header/>
           <Switch>
-            <Route exact path="/home" component={Home}/>
-            <Route path="/login" component={Login}/>
-            <Route path="/signup" component={Signup}/>
+            <Route exact path="/home" render={() => <Home checkLogIn={loggedIn}/>}/>
+            <Route path="/login" render={() => <Login checkLogIn={loggedIn}/>}/>
+            <Route path="/signup" render={() => <Signup checkLogIn={loggedIn}/>}/>
           </Switch>
         </div>
         </Router>
