@@ -10,7 +10,7 @@ import '../Teammate.css'
 class Teammate extends React.Component {
 
     componentDidMount(){
-        let id = this.props.match.params.id
+        let id = this.props.id
         this.props.fetchUserProfile(id) 
     }
 

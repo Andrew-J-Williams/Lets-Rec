@@ -1,34 +1,11 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
-import TeamPosts from '../components/TeamPosts'
 import LeaveTeam from '../components/LeaveTeam'
-
-import { fetchTeam } from '../actions/fetchTeam'
 
 import '../TeamPage.css'
 
-class TeamPage extends React.Component {
+class TeamInfo extends React.Component {
     
-
-    componentDidMount(){
-        const teamId = this.props.match.params.id
-        this.props.fetchTeam(teamId)
-    }
-
-    onLoad(){
-        let myValue = false
-
-        if (! localStorage.pageVisit){
-            localStorage.setItem("pageVisit", myValue);
-            window.location.reload();
-        } else if (localStorage.pageVisit === "false"){
-            console.log("You've been on the Team's Page before!")
-            window.location.reload();
-            localStorage.pageVisit = true
-        } 
-    }
-
     changePic(location){
         const infoDivPic = document.getElementById("info-div")
         if (location === "Houston"){
@@ -59,11 +36,11 @@ class TeamPage extends React.Component {
     }
 
     render(){
-        this.onLoad()
-        const teamObject = this.props.team
 
+        const teamObject = this.props.team
         this.changePic(teamObject.location)
-            return(
+
+        return(
             <div>
                 <div className="team-info-container">
                     <div className="info-div" id="info-div">
@@ -85,17 +62,10 @@ class TeamPage extends React.Component {
                         })}
                     </div>
                 </div>
-                <TeamPosts team={this.props.team}/>
             </div>
-            )
+        )
     }
 
 }
 
-const mapStateToProps = (state) => {
-    return {
-        team: state.teamsReducer.team
-    }
-}
-
-export default connect(mapStateToProps, {fetchTeam})(TeamPage)
+export default TeamInfo

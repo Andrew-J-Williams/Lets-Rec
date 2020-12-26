@@ -35,8 +35,8 @@ class App extends React.Component {
           <Route path="/signup" render={() => <Signup checkLogIn={loggedIn}/>}/>
           <Route path="/profile" render={() => <UserProfile checkLogIn={loggedIn}/>}/>
           <Route exact path="/teams" render={() => <Teams checkLogIn={loggedIn}/>}/>
-          <Route exact path="/teams/:id" render={() => <TeamPage checkLogIn={loggedIn}/>}/>
-          <Route path="/users/:id" render={() => <Teammate checkLogIn={loggedIn}/>}/>
+          <Route exact path="/teams/:id" component={TeamPage}/>
+          <Route exaxt path="/users/:id" component={Teammate}/>
         </Switch>
       </div>
       </Router>
