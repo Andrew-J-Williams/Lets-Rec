@@ -79,6 +79,7 @@ class FindTeams extends React.Component {
                                 </div>
                             )
                         }
+                        return true 
                     })}
                 </div>
                 <form className="search-form" onSubmit={this.handleSubmit}>

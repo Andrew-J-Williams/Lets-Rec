@@ -32,7 +32,7 @@ class TeamPosts extends React.Component{
                                 <Post key={post.id} currentPost={post} deletePost={this.props.deletePost}/>
                         )
                     }
-
+                    return true
                 })}
                 </div>
                 <h4 className="post-title">Team Activity</h4>

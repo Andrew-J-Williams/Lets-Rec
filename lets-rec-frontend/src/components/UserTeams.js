@@ -72,7 +72,7 @@ class UserTeams extends React.Component {
                                         return(
                                             <Link to={userInfo}><li key={user.id} className="member-li"><img src={user.picture} alt="member-bubble" className="member-circle"/></li></Link>
                                         )    
-                                    } 
+                                    }
                                 }    
                                 )}
                             </ul>
@@ -80,6 +80,7 @@ class UserTeams extends React.Component {
                     </div>
                     )
                 }
+                return true 
             })}
             <div className="create-button-container">
                 <button className="create-team-button" id="create-team-button" onClick={this.displayCreator}>Create Team</button>

@@ -33,7 +33,7 @@ export function createPost(userContent){
             h5.classList.add("post-username")
             h5.innerText = localStorage.username
             p1.classList.add("post-content")
-            p1.innerHTML = `<b>${teamName}</b>` + ` ` + `${post.content}`
+            p1.innerHTML = `<b>${teamName}</b> ${post.content}`
 
             div.append(img)
             div.append(h5)
