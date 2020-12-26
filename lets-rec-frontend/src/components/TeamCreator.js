@@ -48,7 +48,6 @@ class TeamCreator extends React.Component {
     }
 
     render(){
-        console.log(parseInt(localStorage.currentUser, 10))
         return(
             <div className="team-creator-container" id="team-creator-container" hidden>
                 <form className="creator-form" onSubmit={this.handleOnSubmit}>

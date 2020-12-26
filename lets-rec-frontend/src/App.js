@@ -7,7 +7,6 @@ import Posts from './containers/Posts'
 import Signup from './components/Signup'
 import UserProfile from './containers/UserProfile'
 import Teams from './containers/Teams'
-import TeamCreator from './components/TeamCreator'
 import Teammate from './components/Teammate'
 import TeamPage from './containers/TeamPage'
 
@@ -30,15 +29,14 @@ class App extends React.Component {
       <div className="App">
         <Header/>
         <Switch>
-          <Route exact path="/" component={Posts}/>
+          <Route exact path="/" render={() => <Posts checkLogIn={loggedIn}/>}/>
           <Route exact path="/home" render={() => <Home checkLogIn={loggedIn}/>}/>
           <Route path="/login" render={() => <Login checkLogIn={loggedIn}/>}/>
           <Route path="/signup" render={() => <Signup checkLogIn={loggedIn}/>}/>
           <Route path="/profile" render={() => <UserProfile checkLogIn={loggedIn}/>}/>
-          <Route path="/team-creator" component={TeamCreator}/>
           <Route exact path="/teams" render={() => <Teams checkLogIn={loggedIn}/>}/>
-          <Route exact path="/teams/:id" component={TeamPage}/>
-          <Route path="/users/:id" component={Teammate}/>
+          <Route exact path="/teams/:id" render={() => <TeamPage checkLogIn={loggedIn}/>}/>
+          <Route path="/users/:id" render={() => <Teammate checkLogIn={loggedIn}/>}/>
         </Switch>
       </div>
       </Router>

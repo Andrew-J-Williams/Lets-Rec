@@ -23,7 +23,8 @@ class Teammate extends React.Component {
     render(){
         let memberInfo = this.props.member
         
-        return(
+        if(this.props.checkLogIn){
+            return(
             <div classname="member-container">
                 <div className="member-profile-container">
                     <div className="member-info-box">
@@ -39,7 +40,10 @@ class Teammate extends React.Component {
                 </div>
                 <TeammatePosts member={memberInfo}/>
             </div>
-        )
+            )
+        } else {
+            window.location.replace('http://localhost:3001/home')
+        } 
     }
 }
 

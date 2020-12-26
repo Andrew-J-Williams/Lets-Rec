@@ -63,8 +63,9 @@ class TeamPage extends React.Component {
         const teamObject = this.props.team
 
         this.changePic(teamObject.location)
-        
-        return(
+
+        if(this.props.checkLogIn){
+            return(
             <div>
                 <div className="team-info-container">
                     <div className="info-div" id="info-div">
@@ -88,7 +89,10 @@ class TeamPage extends React.Component {
                 </div>
                 <TeamPosts team={this.props.team}/>
             </div>
-        )
+            )
+        } else {
+            window.location.replace('http://localhost:3001/home')
+        } 
     }
 
 }

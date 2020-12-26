@@ -39,7 +39,7 @@ class Teams extends React.Component {
                 </div>     
             )
         } else {
-            window.location.replace('http://localhost:3001/login')
+            window.location.replace('http://localhost:3001/home')
         }
     }
 }
