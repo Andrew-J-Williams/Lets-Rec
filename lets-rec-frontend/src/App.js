@@ -25,7 +25,6 @@ class App extends React.Component {
 
     let loggedIn = parseInt(localStorage.currentUser, 10) && localStorage.username && localStorage.email && localStorage.teams && localStorage.pic    
     
-    if (loggedIn){
     return (
       <Router>
       <div className="App">
@@ -35,29 +34,15 @@ class App extends React.Component {
           <Route exact path="/home" render={() => <Home checkLogIn={loggedIn}/>}/>
           <Route path="/login" render={() => <Login checkLogIn={loggedIn}/>}/>
           <Route path="/signup" render={() => <Signup checkLogIn={loggedIn}/>}/>
-          <Route path="/profile" component={UserProfile}/>
+          <Route path="/profile" render={() => <UserProfile checkLogIn={loggedIn}/>}/>
           <Route path="/team-creator" component={TeamCreator}/>
-          <Route exact path="/teams" component={Teams}/>
+          <Route exact path="/teams" render={() => <Teams checkLogIn={loggedIn}/>}/>
           <Route exact path="/teams/:id" component={TeamPage}/>
           <Route path="/users/:id" component={Teammate}/>
         </Switch>
       </div>
       </Router>
     );
-    } else {
-      return (
-        <Router>
-        <div className="App">
-          <Header/>
-          <Switch>
-            <Route exact path="/home" render={() => <Home checkLogIn={loggedIn}/>}/>
-            <Route path="/login" render={() => <Login checkLogIn={loggedIn}/>}/>
-            <Route path="/signup" render={() => <Signup checkLogIn={loggedIn}/>}/>
-          </Switch>
-        </div>
-        </Router>
-      );
-    }
   }
 }
 

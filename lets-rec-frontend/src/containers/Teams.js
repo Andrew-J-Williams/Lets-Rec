@@ -29,16 +29,18 @@ class Teams extends React.Component {
     }
 
     render(){
-        this.onLoad()
-        return (
-            <div className="main-teams-container">
-                <UserTeams teams={this.props.teamsList}/>
-                <FindTeams teams={this.props.teamsList}/>
-                <TeamCreator teams={this.props.teamsList}/>
-            </div>
-            
-        )
-
+        if(this.props.checkLogIn){
+            this.onLoad()
+            return (
+                <div className="main-teams-container">
+                    <UserTeams teams={this.props.teamsList}/>
+                    <FindTeams teams={this.props.teamsList}/>
+                    <TeamCreator teams={this.props.teamsList}/>
+                </div>     
+            )
+        } else {
+            window.location.replace('http://localhost:3001/login')
+        }
     }
 }
 
