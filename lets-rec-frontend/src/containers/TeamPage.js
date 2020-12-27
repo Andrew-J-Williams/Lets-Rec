@@ -31,10 +31,12 @@ class TeamPage extends React.Component {
 
     render(){
         this.onLoad()
+        console.log(this.props.posts)
+
             return(
             <div>
                 <TeamInfo team={this.props.team}/>
-                <TeamPosts team={this.props.team}/>
+                <TeamPosts team={this.props.team} teamPosts={this.props.posts}/>
             </div>
             )
     }
@@ -43,7 +45,8 @@ class TeamPage extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        team: state.teamsReducer.team
+        team: state.teamsReducer.team,
+        posts: state.userReducer.posts
     }
 }
 
