@@ -10,12 +10,15 @@ Fork and clone this repository to your local machine.
 Change the directory to 'Lets-Rec' and run the following:
 
   • cd lets-rec-backend
+  
   • bundle install
   
 You will then want to setup the database by running the following:
 
   • rake db:create
+  
   • rake db:migrate
+  
   • rake db:seed
   
 To run the Rails server from localhost:3000, run:
@@ -29,6 +32,7 @@ If everything is working, if you navigate to `localhost:3000/api/v1/teams` you s
 Navigate back to the 'Lets-Rec' directory and then run the following:
 
   • cd lets-rec-frontend
+  
   • npm start
   
 If everything is working, you should see the application display at `localhost:3001/home`.
