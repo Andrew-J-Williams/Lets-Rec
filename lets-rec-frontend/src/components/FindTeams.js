@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { createUserTeams } from '../actions/createTeam'
+import { createUserTeams } from '../actions/createUserTeams'
 import { addTeamtoUser } from '../actions/fetchTeam'
 
 import '../FindTeams.css'

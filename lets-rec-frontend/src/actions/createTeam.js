@@ -30,12 +30,21 @@ export function createTeam(info){
             console.log(userTeamsArray)
             localStorage.setItem("teams", JSON.stringify(userTeamsArray))
 
+            let myId = parseInt(localStorage.currentUser, 10)
+
+            createConnection(myId, team.id)
+
             dispatch(makeTeam(team))
         })
     }
 }
 
-export function createUserTeams(userId, teamId){
+const makeTeam = input => ({
+    type: 'CREATE_TEAM',
+    payload: input
+})
+
+function createConnection(userId, teamId){
 
     const data = {
         user_id: userId,
@@ -54,17 +63,7 @@ export function createUserTeams(userId, teamId){
         .then(response => response.json())
         .then(userteam => {
             console.log(userteam)
-            dispatch(makeConnection(userteam))
         })
     }
+
 }
-
-const makeTeam = input => ({
-    type: 'CREATE_TEAM',
-    payload: input
-})
-
-const makeConnection = userteam => ({
-    type: 'CREATE_USER_TEAMS',
-    payload: userteam
-})
