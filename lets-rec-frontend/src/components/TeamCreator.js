@@ -15,8 +15,7 @@ class TeamCreator extends React.Component {
         venue: '',
         timeslot: '',
         status: 'open',
-        members: 1,
-        users:[]
+        members: 1
     }
 
 

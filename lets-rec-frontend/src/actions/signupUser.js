@@ -1,4 +1,4 @@
-export const signUserUp = (info, history) => {
+export const signUserUp = (info) => {
 
     const newUser = {
         username: info.username,
@@ -23,7 +23,7 @@ export const signUserUp = (info, history) => {
             if (user.error){
                 console.log(user)
                 alert(user.error)
-                history.push('/signup')
+                window.location.replace('http://localhost:3001/signup')
             } else {
                 console.log(user)
                 
@@ -34,8 +34,7 @@ export const signUserUp = (info, history) => {
                 localStorage.setItem("pic", user.picture)
 
                 dispatch(createUser(user))
-                history.push(`/profile`)
-                window.location.reload()
+                window.location.replace('http://localhost:3001/profile')
             }
         })
 

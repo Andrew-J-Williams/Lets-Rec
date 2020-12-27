@@ -18,11 +18,10 @@ class Teams extends React.Component {
     onLoad(){
         let myValue = true
 
-        if (! localStorage.pageVisit){
+        if (!localStorage.pageVisit){
             localStorage.setItem("pageVisit", myValue);
             window.location.reload();
         } else if (localStorage.pageVisit === "true"){
-            console.log("You've been here!")
             window.location.reload();
             localStorage.pageVisit = false
         } 

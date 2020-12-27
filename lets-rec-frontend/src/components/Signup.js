@@ -23,7 +23,7 @@ class Signup extends React.Component {
     handleOnSubmit = (event) => {
         event.preventDefault()
         console.log(this.state)
-        this.props.signUserUp(this.state, this.props.history)
+        this.props.signUserUp(this.state)
     }
 
     render(){
@@ -58,7 +58,7 @@ class Signup extends React.Component {
                     <br></br>
                     <input
                         name="picture"
-                        placeholder="Picture URL"
+                        placeholder="Profile Picture URL"
                         value={this.state.picture}
                         onChange={this.handleOnChange}
                         className="sign-up-picture"
@@ -67,7 +67,7 @@ class Signup extends React.Component {
                     <button
                         type="submit"
                         className="sign-up-button"
-                    >Create Account!</button>
+                    >Create Account</button>
                 </form>
             </div>
         )

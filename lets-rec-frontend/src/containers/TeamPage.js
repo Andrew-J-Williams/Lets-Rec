@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import TeamInfo from '../components/TeamInfo'
 import TeamPosts from '../components/TeamPosts'
 
-import { fetchAllPosts } from '../actions/fetchAllPosts'
+import { fetchPosts } from '../actions/fetchPosts'
 import { fetchTeam } from '../actions/fetchTeam'
 
 import '../TeamPage.css'
@@ -15,13 +15,13 @@ class TeamPage extends React.Component {
     componentDidMount(){
         const teamId = this.props.match.params.id
         this.props.fetchTeam(teamId)
-        this.props.fetchAllPosts()
+        this.props.fetchPosts()
     }
 
     onLoad(){
         let myValue = false
 
-        if (! localStorage.pageVisit){
+        if (!localStorage.pageVisit){
             localStorage.setItem("pageVisit", myValue);
             window.location.reload();
         } else if (localStorage.pageVisit === "false"){
@@ -33,7 +33,6 @@ class TeamPage extends React.Component {
 
     render(){
         this.onLoad()
-        console.log(this.props.posts)
 
             return(
             <div>
@@ -48,8 +47,8 @@ class TeamPage extends React.Component {
 const mapStateToProps = (state) => {
     return {
         team: state.teamsReducer.team,
-        posts: state.postReducer.posts
+        posts: state.userReducer.posts
     }
 }
 
-export default connect(mapStateToProps, {fetchAllPosts, fetchTeam})(TeamPage)
+export default connect(mapStateToProps, {fetchPosts, fetchTeam})(TeamPage)

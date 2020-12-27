@@ -17,10 +17,7 @@ class UserTeams extends React.Component {
 
 
     render(){
-        const teamsArray = this.props.teams
-        console.log(teamsArray)
         const userTeams = JSON.parse(localStorage.getItem('teams'))
-        console.log(userTeams)
         const userTeamsArray = []
         userTeams.forEach(team => {userTeamsArray.push(team.id)})
 

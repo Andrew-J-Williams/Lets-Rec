@@ -1,4 +1,4 @@
-export const logUserIn = (info, history) => {
+export const logUserIn = (info) => {
 
     return (dispatch) => {
         fetch('http://localhost:3000/api/v1/login', {
@@ -13,7 +13,7 @@ export const logUserIn = (info, history) => {
         .then(user => {
             if (user.error){
                 alert(user.error)
-                history.push('/login')
+                window.location.replace('http://localhost:3001/login')
             } else {
                 console.log(user)
                 

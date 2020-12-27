@@ -1,4 +1,17 @@
 export function createTeam(info){
+
+    const newTeam = {
+        name: info.name,
+        sport: info.sport,
+        location: info.location,
+        venue: info.venue,
+        timeslot: info.timeslot,
+        status: info.status,
+        members: info.members,
+    }
+
+
+
     return (dispatch) => {
         fetch(`http://localhost:3000/api/v1/teams`, {
             method: 'POST',
@@ -6,7 +19,7 @@ export function createTeam(info){
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
-            body: JSON.stringify(info)
+            body: JSON.stringify(newTeam)
         })
         .then(response => response.json())
         .then(team => {
