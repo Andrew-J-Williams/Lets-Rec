@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import TeamInfo from '../components/TeamInfo'
 import TeamPosts from '../components/TeamPosts'
 
+import { fetchAllPosts } from '../actions/fetchAllPosts'
 import { fetchTeam } from '../actions/fetchTeam'
 
 import '../TeamPage.css'
@@ -14,6 +15,7 @@ class TeamPage extends React.Component {
     componentDidMount(){
         const teamId = this.props.match.params.id
         this.props.fetchTeam(teamId)
+        this.props.fetchAllPosts()
     }
 
     onLoad(){
@@ -46,8 +48,8 @@ class TeamPage extends React.Component {
 const mapStateToProps = (state) => {
     return {
         team: state.teamsReducer.team,
-        posts: state.userReducer.posts
+        posts: state.postReducer.posts
     }
 }
 
-export default connect(mapStateToProps, {fetchTeam})(TeamPage)
+export default connect(mapStateToProps, {fetchAllPosts, fetchTeam})(TeamPage)
