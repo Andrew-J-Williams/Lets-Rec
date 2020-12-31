@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { createTeam } from '../actions/createTeam'
-import { createUserTeams } from '../actions/createUserTeams'
 
 import '../TeamCreator.css'
 
@@ -28,14 +27,8 @@ class TeamCreator extends React.Component {
 
     handleOnSubmit = (event) => {
         event.preventDefault()
-        const currentUserId = parseInt(localStorage.currentUser, 10)
-        const newTeamId = this.props.teams[this.props.teams.length-1].id+1
-
-        console.log(currentUserId)
-        console.log(newTeamId)
-
+       
         this.props.createTeam(this.state)
-        this.props.createUserTeams(currentUserId, newTeamId)
         window.location.reload()
     }
 
@@ -104,4 +97,4 @@ class TeamCreator extends React.Component {
 
 }
 
-export default connect(null, {createTeam, createUserTeams})(TeamCreator)
+export default connect(null, {createTeam})(TeamCreator)

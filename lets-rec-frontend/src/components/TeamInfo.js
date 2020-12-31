@@ -14,7 +14,7 @@ class TeamInfo extends React.Component {
             infoDivPic.style.backgroundImage = "url('https://i.imgur.com/qHY9Nok.jpeg')"
         } else if (location === "Los Angeles"){
             infoDivPic.style.backgroundImage = "url('https://theclimatecenter.org/wp-content/uploads/2020/08/night-lights-in-los-angeles-california-cityscape-scaled.jpg')"
-        } else if (location === "New York City"){
+        } else if (location === "New York City" || location === "New York"){
             infoDivPic.style.backgroundImage = "url('https://i.ytimg.com/vi/dMgBYqTlnkk/maxresdefault.jpg')"
         } else if (location === "Phoenix") {
             infoDivPic.style.backgroundImage = "url('https://res.cloudinary.com/simpleview/image/upload/v1597873841/clients/phoenix/Downtown_Phoenix_Skyline_with_Full_Moon_Header_6941527a-4ae5-48d9-8df2-1e3810a31704.jpg')"
