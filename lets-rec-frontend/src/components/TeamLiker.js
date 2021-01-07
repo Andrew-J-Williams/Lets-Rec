@@ -9,10 +9,8 @@ class TeamLiker extends React.Component {
     }
 
     handleClick = () => {
-        this.setState(changeVal => {
-            return {
-                isLiked: !changeVal.isLiked
-            }
+        this.setState({
+            isLiked: !this.state.isLiked
         })
     }
 
