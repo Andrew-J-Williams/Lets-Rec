@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import TeamLiker from '../components/TeamLiker'
+
 import '../UserTeams.css'
 
 class UserTeams extends React.Component {
-    
+
     displayCreator(){
         const findTeamsContainer = document.getElementById("find-teams-container")
         const teamCreatorContainer = document.getElementById("team-creator-container")
@@ -13,6 +15,14 @@ class UserTeams extends React.Component {
         findTeamsContainer.hidden = true
         teamCreatorContainer.hidden = false
         teamButton.style.display = "none"
+    }
+
+    likePost = () => {
+        this.setState(booleanVal => {
+            return{
+            like: !booleanVal.like
+            }
+        })
     }
 
 
@@ -74,6 +84,7 @@ class UserTeams extends React.Component {
                                 )}
                             </ul>
                         </div>
+                        <TeamLiker/>
                     </div>
                     )
                 }
