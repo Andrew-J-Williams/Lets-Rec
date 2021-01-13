@@ -8,7 +8,7 @@
     position: fixed;
     overflow: scroll;
     padding-top: 60px;
-    left: 160px;
+    left: 260px;
     top: 180px;
 }
 
@@ -20,7 +20,7 @@
     margin-bottom: 20px;
     padding-bottom: 9px;
     padding-top: 30px;
-    left: 172px;
+    left: 272px;
     top: 159px;
     width: 350px;
     padding-top: 10px;
@@ -115,7 +115,7 @@ a {
     margin: auto;
     text-align: center;
     position: fixed;
-    left: 207px;
+    left: 307px;
     background-color: white;
     opacity: 90%;
     height: 60px;

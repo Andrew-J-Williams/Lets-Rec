@@ -17,14 +17,6 @@ class UserTeams extends React.Component {
         teamButton.style.display = "none"
     }
 
-    likePost = () => {
-        this.setState(booleanVal => {
-            return{
-            like: !booleanVal.like
-            }
-        })
-    }
-
 
     render(){
         const userTeams = JSON.parse(localStorage.getItem('teams'))
@@ -90,9 +82,6 @@ class UserTeams extends React.Component {
                 }
                 return true 
             })}
-            <div className="create-button-container">
-                <button className="create-team-button" id="create-team-button" onClick={this.displayCreator}>Create Team</button>
-            </div>
         </div>
     )
     }

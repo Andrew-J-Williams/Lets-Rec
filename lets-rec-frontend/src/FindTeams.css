@@ -8,7 +8,7 @@
     margin: auto;
     text-align: center;
     position: fixed;
-    left: 600px;
+    left: 700px;
     top: 180px;
     overflow: auto;
     color: black;
@@ -31,7 +31,7 @@
     border-radius: 4px;
     box-shadow: 0 4px 15px rgba(0,0,0,.25);
     top: 200px;
-    left: 709px;
+    left: 809px;
     margin-bottom: 40px;
 }
 

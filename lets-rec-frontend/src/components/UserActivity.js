@@ -15,7 +15,7 @@ class UserActivity extends React.Component {
 
         return(
             <div className="activity-container" id="activity-container">
-                <h4 className="my-activity-feed">My Posts</h4>
+                <h4 className="activity-title">My Posts</h4>
                 {userPosts.map(post =>
                     <Post key={post.id} currentPost={post} deletePost={this.props.deletePost}/>
                 )}

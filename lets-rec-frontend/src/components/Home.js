@@ -2,9 +2,7 @@ import React from 'react'
 
 import '../Home.css'
 
-class Home extends React.Component{
-
-render(){
+const Home = (props) => {
     return(
         <div>
             <div className="home-container">
@@ -17,7 +15,7 @@ render(){
                     <h5 className="home-summ">We are a nationwide community focused on connecting athletes and sports lovers. Join a team, or create your own, and stay up to date with your teammates. Our #1 goal is having fun, so get out there and rec!</h5>
                     <br></br>
                     {
-                        this.props.checkLogIn ? 
+                        props.checkLogIn ? 
 
                         <div>
                             <a href="profile">
@@ -41,7 +39,6 @@ render(){
             </div>
         </div>
     )
-  }
 }
   
 export default Home;
