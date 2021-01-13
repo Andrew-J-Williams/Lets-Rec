@@ -4,9 +4,7 @@ import { NavLink } from 'react-router-dom';
 import '../NavBar.css'
 
 
-class NavBar extends React.Component{
-
-  render(){
+const NavBar = () =>{
     return (
       <div className="navbar">
         <ul>
@@ -16,7 +14,6 @@ class NavBar extends React.Component{
         </ul>
       </div>
     );
-  }
 }
   
 export default NavBar;
