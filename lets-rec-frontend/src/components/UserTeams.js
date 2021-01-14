@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import TeamLiker from '../components/TeamLiker'
-
 import '../UserTeams.css'
 
 class UserTeams extends React.Component {
@@ -76,7 +74,6 @@ class UserTeams extends React.Component {
                                 )}
                             </ul>
                         </div>
-                        <TeamLiker/>
                     </div>
                     )
                 }
