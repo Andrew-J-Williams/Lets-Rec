@@ -1,13 +1,12 @@
 .feed-title {
     position: fixed;
-    left: 520px;
-    top: 159px;
+    margin: auto;
+    top: 180px;
     background-color: white;
     color: black;
-    width: 640px;
+    width: 600px;
     font-weight: 200;
-    margin-bottom: 20px;
-    padding-bottom: 9px;
+    padding-bottom: 10px;
     padding-top: 30px;
     opacity: 80%;
 }
