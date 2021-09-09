@@ -11,6 +11,10 @@
     opacity: 80%;
 }
 
+.updates-container::-webkit-scrollbar {
+    display: none;
+}
+
 .updates-container {
     background-color: white;
     padding: 30px;
@@ -19,7 +23,7 @@
     margin: auto;
     box-shadow: 1px 1px 3px lightgray;
     border-radius: 10px;
-    overflow: auto;
+    overflow-y: auto;
     position: relative;
     top: 70px;
 }

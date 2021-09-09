@@ -16,14 +16,15 @@ class ActivityFeed extends React.Component{
 
         return(
             <div className="activity-div">
+                
                 <div className="updates-container">
-                <h4 className="feed-title">Activity Feed</h4>
+                
                     {userActivity.map(post => {
                         return( 
                             <Post key={post.id} currentPost={post} deletePost={this.props.deletePost}/>
                         )
-                    }
-                )}
+                    })}
+                    <h4 className="feed-title">Activity Feed</h4>
                 </div>
             </div>
         )
