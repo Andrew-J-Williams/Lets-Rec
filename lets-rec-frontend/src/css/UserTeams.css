@@ -2,7 +2,7 @@
     background-color: white;
     margin: auto;
     width: 400px;
-    height: 440px;
+    height: 640px;
     box-shadow: 1px 1px 3px lightgray;
     border-radius: 10px;
     position: fixed;
@@ -10,6 +10,10 @@
     padding-top: 60px;
     left: 260px;
     top: 180px;
+}
+
+.user-teams-container::-webkit-scrollbar {
+    display: none;
 }
 
 .user-teams-title {
@@ -38,6 +42,10 @@
     box-shadow: 0 4px 15px rgba(0,0,0,.25);
     transition: 0.3s;
     overflow: hidden
+}
+
+.team-circle::-webkit-scrollbar {
+    display: none;
 }
 
 .team-background {
@@ -75,6 +83,10 @@
     overflow: auto;
 }
 
+.members-circle::-webkit-scrollbar {
+    display: none;
+}
+
 .member-circle {
     height: 30px;
     width: 30px;
@@ -100,6 +112,10 @@
     width: 300px;
     list-style-type: none;
     overflow: auto;
+}
+
+.members-list::-webkit-scrollbar {
+    display: none;
 }
 
 .member-li {

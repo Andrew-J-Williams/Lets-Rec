@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 
 import { fetchAllPosts } from '../actions/fetchAllPosts'
 
+import "../css/UserActivity.css"
+
 class TeammatePosts extends React.Component {
 
 
@@ -19,7 +21,7 @@ class TeammatePosts extends React.Component {
 
         return(
             <div className="activity-container">
-                <h3 className="my-activity-feed">{memberUsername}'s Posts</h3>
+                <h3 className="activity-title-two">{memberUsername}'s Posts</h3>
                 {memberPosts.map(post =>
                     <div key={post.id} className="user-post-container">
                         <img src={post.user.picture} className="post-picture" alt="profile-icon"/>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import '../UserTeams.css'
+import '../css/UserTeams.css'
 
 class UserTeams extends React.Component {
 

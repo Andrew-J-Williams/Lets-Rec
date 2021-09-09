@@ -3,8 +3,8 @@
     background-size: cover;
     box-shadow: 1px 1px 3px lightgray;
     border-radius: 10px;
-    width: 700px;
-    height: 500px;
+    width: 900px;
+    height: 700px;
     margin: auto;
     text-align: center;
     position: fixed;
@@ -22,7 +22,7 @@
     margin-bottom: 30px;
     background-color: white;
     opacity: 90%;
-    width: 450px;
+    width: 550px;
     height: auto;
     position: fixed;
     margin: auto;
@@ -31,7 +31,7 @@
     border-radius: 4px;
     box-shadow: 0 4px 15px rgba(0,0,0,.25);
     top: 200px;
-    left: 809px;
+    left: 859px;
     margin-bottom: 40px;
 }
 
@@ -40,7 +40,7 @@
     float: left;
     margin-left: 20px;
     position: relative;
-    left: 102px;
+    left: 147px;
     font-weight: 100;
     color: black;
     border-color: black;

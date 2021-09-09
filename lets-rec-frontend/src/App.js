@@ -10,7 +10,7 @@ import Teams from './containers/Teams'
 import Teammate from './components/Teammate'
 import TeamPage from './containers/TeamPage'
 
-import './App.css'
+import './css/App.css'
 
 import {
   BrowserRouter as Router,

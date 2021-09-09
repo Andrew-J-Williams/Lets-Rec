@@ -3,15 +3,19 @@
     background: url("https://i.imgur.com/qwQNhRX.png");
     background-size: 500px 500px;
     padding: 30px;
-    width: 500px;
-    height: 500px; 
+    width: 600px;
+    height: 600px; 
     margin: auto;
     box-shadow: 1px 1px 3px lightgray;
     border-radius: 10px;
     overflow: auto;
     position: fixed;
-    left: 890px;
+    left: 990px;
     top: 180px;
+}
+
+.profile-container::-webkit-scrollbar {
+    display: none;
 }
 
 .profile-pic-container {
@@ -30,6 +34,10 @@
     background-color: white;
     box-shadow: 0 4px 15px rgba(0,0,0,.25);
     border-radius: 10px;
+}
+
+.info-box::-webkit-scrollbar {
+    display: none;
 }
 
 .profile-pic {

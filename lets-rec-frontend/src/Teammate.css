@@ -3,14 +3,14 @@
     background: url("https://i.imgur.com/Nh04E18.png");
     background-size: cover;
     padding: 30px;
-    width: 500px;
-    height: 500px; 
+    width: 600px;
+    height: 600px; 
     margin: auto;
     box-shadow: 1px 1px 3px lightgray;
     border-radius: 10px;
     overflow: auto;
     position: fixed;
-    left: 750px;
+    left: 990px;
     top: 180px;
 }
 
@@ -30,6 +30,10 @@
     background-color: white;
     box-shadow: 0 4px 15px rgba(0,0,0,.25);
     border-radius: 10px;
+}
+
+.member-info-box::-webkit-scrollbar {
+    display: none;
 }
 
 .member-profile-pic {
