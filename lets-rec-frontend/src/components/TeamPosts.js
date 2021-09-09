@@ -6,7 +6,7 @@ import Post from '../components/Post'
 
 import { deletePost } from '../actions/deletePost'
 
-import '../UserActivity.css'
+import '../css/UserActivity.css'
 
 class TeamPosts extends React.Component{
  

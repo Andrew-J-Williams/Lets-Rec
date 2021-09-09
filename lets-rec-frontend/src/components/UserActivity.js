@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import Post from '../components/Post'
 
-import '../UserActivity.css'
+import '../css/UserActivity.css'
 
 import { deletePost } from '../actions/deletePost'
 

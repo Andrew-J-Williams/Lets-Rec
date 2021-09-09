@@ -5,8 +5,8 @@ import Post from '../components/Post'
 
 import { deletePost } from '../actions/deletePost'
 
-import '../ActivityFeed.css'
-import '../UserActivity.css'
+import '../css/ActivityFeed.css'
+import '../css/UserActivity.css'
 
 class ActivityFeed extends React.Component{
 

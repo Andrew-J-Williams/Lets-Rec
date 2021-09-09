@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../UserActivity.css'
+import '../css/UserActivity.css'
 
 const Post = (props) => {
 
