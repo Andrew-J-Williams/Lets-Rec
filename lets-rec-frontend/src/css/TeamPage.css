@@ -6,13 +6,13 @@
     box-shadow: 1px 1px 3px lightgray;
     border-radius: 10px;
     position: fixed;
-    left: 200px;
-    top: 180px;
+    left: 450px;
+    top: 160px;
     padding: 30px;
-    width: 300px;
-    height: 250px;
-    max-height: 250px;
-    overflow: scroll;
+    width: 1000px;
+    height: 300px;
+    max-height: 350px;
+    overflow: auto;
 }
 
 .users-div {
@@ -20,12 +20,12 @@
     box-shadow: 1px 1px 3px lightgray;
     border-radius: 10px;
     position: fixed;
-    left: 200px;
-    top: 500px;
+    left: 450px;
+    top: 540px;
     padding: 30px;
-    width: 300px;
-    height: 190px;
-    overflow: scroll;
+    width: 330px;
+    height: 310px;
+    overflow: auto;
 }
 
 .info-location {
@@ -68,7 +68,7 @@
 
 .post-title {
     position: fixed;
-    top: 159px;
+    top: 519px;
     background-color: white;
     color: black;
     width: 600px;
@@ -95,8 +95,8 @@
     padding-top: 30px;
     opacity: 80%;
     padding-top: 30px;
-    width: 330px;
-    top: 480px;
+    width: 350px;
+    top: 519px;
 }
 
 .team-leave-button {

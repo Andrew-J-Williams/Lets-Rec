@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import { createPost } from '../actions/createPost'
 
-import '../PostCreator.css'
+import '../css/PostCreator.css'
 
 class PostCreator extends React.Component{
 

@@ -5,7 +5,7 @@
     border-radius: 4px;
     position: fixed;
     width: 560px;
-    top: 260px;
+    top: 610px;
 }
 
 .user-post-img {
@@ -22,8 +22,8 @@
     border-radius: 10px;
     font-weight: 100;
     position: fixed;
-    left: 695px;
-    top: 282px;
+    left: 970px;
+    top: 631px;
 }
 
 .post-input:focus {
@@ -46,8 +46,8 @@
     margin: auto;
     text-decoration: none;
     position: fixed;
-    left: 1120px;
-    top: 290px;
+    left: 1390px;
+    top: 640px;
 }
 
 .post-button:hover {

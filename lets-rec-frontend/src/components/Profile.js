@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { logUserOut } from '../actions/logoutUser'
 
-import '../Profile.css'
+import '../css/Profile.css'
 
 
 class Profile extends React.Component {

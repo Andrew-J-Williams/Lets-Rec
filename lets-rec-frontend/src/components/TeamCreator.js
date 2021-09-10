@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import { createTeam } from '../actions/createTeam'
 
-import '../TeamCreator.css'
+import '../css/TeamCreator.css'
 
 class TeamCreator extends React.Component {
 

@@ -7,7 +7,7 @@ import UserTeams from '../components/UserTeams'
 
 import { fetchTeams } from '../actions/fetchTeams'
 
-import '../Teams.css'
+import '../css/Teams.css'
 
 class Teams extends React.Component {
 

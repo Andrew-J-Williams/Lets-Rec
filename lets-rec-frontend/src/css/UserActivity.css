@@ -43,12 +43,16 @@
     border-radius: 10px;
     padding: 20px;
     width: 600px;
-    height: 420px;
+    height: 220px;
     position: fixed;
-    top: 180px;
-    left: 600px;
+    top: 540px;
+    left: 870px;
     overflow: auto;
     padding-top: 130px;
+}
+
+.team-posts-container::-webkit-scrollbar {
+    display: none;
 }
 
 .my-activity-feed {
