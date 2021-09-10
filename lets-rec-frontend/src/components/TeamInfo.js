@@ -2,7 +2,7 @@ import React from 'react';
 
 import LeaveTeam from '../components/LeaveTeam'
 
-import '../TeamPage.css'
+import '../css/TeamPage.css'
 
 class TeamInfo extends React.Component {
     

@@ -22,14 +22,26 @@ class TeamCreator extends React.Component {
         this.setState({
             [event.target.name]: event.target.value
         })
+
+        let getAlert = document.getElementById("error")
+        getAlert.hidden = true
         console.log(event.target.value)
     }
 
     handleOnSubmit = (event) => {
-        event.preventDefault()
+
+        let getAlert = document.getElementById("error")
+
+        if(this.state.name !== '' && this.state.sport !== '' && this.state.location !== '' && this.state.venue !== '' && this.state.timeslot !== ''){
+            event.preventDefault()
        
-        this.props.createTeam(this.state)
-        window.location.reload()
+            this.props.createTeam(this.state)
+            window.location.reload()
+        } else {
+            event.preventDefault()
+            getAlert.hidden = false
+        }
+
     }
 
     backToFinder(){
@@ -47,6 +59,7 @@ class TeamCreator extends React.Component {
             <div className="team-creator-container" id="team-creator-container" hidden>
                 <form className="creator-form" onSubmit={this.handleOnSubmit}>
                     <h1 className="creator-header">Create Your Team!</h1>
+                    <p className="error-text" id="error" hidden>Please do not leave any field blank</p>
                     <label className="creator-label">Team Name </label>
                     <input
                     name="name"
@@ -88,8 +101,9 @@ class TeamCreator extends React.Component {
                     ></input>
                     <br></br><br></br>
                     <button className="creator-button" type="submit">Submit</button>
+                    <button className="creator-button-back" onClick={this.backToFinder}>Back</button>
                 </form>
-                <button className="creator-button-back" onClick={this.backToFinder}>Back</button>
+                
             </div>
         )
     }

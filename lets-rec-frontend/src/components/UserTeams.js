@@ -79,6 +79,9 @@ class UserTeams extends React.Component {
                 }
                 return true 
             })}
+            <div className="create-button-container">
+                <button className="create-team-button" id="create-team-button" onClick={this.displayCreator}>Create Team</button>
+            </div>
         </div>
     )
     }

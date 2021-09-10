@@ -5,7 +5,7 @@ import TeammatePosts from '../components/TeammatePosts'
 
 import { fetchUserProfile } from '../actions/fetchUserProfile'
 
-import '../Teammate.css'
+import '../css/Teammate.css'
 
 class Teammate extends React.Component {
 

@@ -7,7 +7,7 @@ import TeamPosts from '../components/TeamPosts'
 import { fetchPosts } from '../actions/fetchPosts'
 import { fetchTeam } from '../actions/fetchTeam'
 
-import '../TeamPage.css'
+import '../css/TeamPage.css'
 
 class TeamPage extends React.Component {
     
